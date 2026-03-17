@@ -17,3 +17,4 @@
 !media/**
 
 /.quarto/
+**/.DS_Store
