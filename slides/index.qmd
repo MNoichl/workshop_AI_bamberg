@@ -79,6 +79,7 @@ Foundations, limits, workflows -->
 * How do LLMs work?
 * How to think about them?
 * Econ & Ethics
+* *10 Minute Break*
 * Usage for research.
 * Usage for actual science.
 
@@ -279,6 +280,14 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 * Maybe a future in review pipelines. PUT EXAMPLE?
 
 
+# Data annotation {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
+
+* Annotation and extraction are often the easiest high-value research uses.
+* Give the model a schema, examples, and a concrete output format.
+* Validate on a hand-checked sample before scaling up.
+* Exercise: politician extraction + tone scoring. [OPEN TEXT](#){.opens-modal data-modal-type="html" data-modal-url="media/data-annotation-exercise.html"}
+
+
 # Models for inquiry  {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
 
 * Autonomous research like **Deep Research** can be very helpful.
@@ -325,10 +334,14 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 # Usage as scientists {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
 
-* LLMs can do data-labelling on complex categories very well.
-* Validate inter-rater agreement like usual, then scale up. 
+* LLMs can do data-labelling on complex categories.
+* Structured generation!
+* Serial queries are necessary: LLMs are lazy.
+* Validate inter-rater agreement LLM & human, then scale up. 
 * Usage via APIs or locally for sensitive data.
 * Set spending limits & alerts!
+
+
 
 <!-- 
 * Data labeling is already a real research use case when you provide a codebook, examples, and a clear output schema.

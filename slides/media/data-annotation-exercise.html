@@ -1,0 +1,54 @@
+<style>
+  .gp-text-modal {
+    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    color: #111;
+  }
+
+  .gp-text-modal h2 {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .gp-text-modal pre {
+    margin: 0;
+    padding: 18px 20px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.45;
+    font-size: 0.96rem;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    background: rgba(0, 0, 0, 0.04);
+  }
+</style>
+
+<div class="gp-text-modal">
+  <h2>Data Annotation Exercise</h2>
+  <pre>"""Neue Tank-Regel ab Ostern
+:
+Setzt die Regierung auf das falsche Modell ?
+
+Berlin – Jetzt legt Wirtschaftsministerin Katherina Reiche (52, CDU) im Sprit-Streit einen höheren Gang ein: Noch vor Ostern soll die neue Tank-Regelung beschlossen werden, wonach Tankstellen nur noch einmal täglich um 12 Uhr den Preis anheben dürfen. Großes Vorbild: Österreich. Die Hoffnung: Schluss mit der Tank-Abzocke! Doch kann das klappen?
+
+Der Blick ins Alpen-Nachbarland zeigt: eher nicht. Denn seit Ausbruch des Irankriegs knallten in Österreich die Preise laut EU-Kommission um 13 Prozent (Super) und 23 Prozent (Diesel) rauf – der zweitstärkste Anstieg in der EU! Knapp davor liegt nur noch Deutschland (14 Prozent Super; 25 Prozent Diesel). Problem: In Österreich wurde die Regelung nie als Preisbremse eingeführt, sondern um Transparenz für die Autofahrer zu schaffen, die die Preise vor dem Tanken online vergleichen wollten.
+
+„Wissen gar nicht, ob es diesen Effekt gibt“
+Michael Böheim (Wifo), österreichischer Wirtschaftsexperte, hat das Tank-Modell vor mehr als 15 Jahren mitentwickelt. Der Ökonom zu BILD: „Primärer Sinn der Regelung ist es, Transparenz zu schaffen, und nicht, Preise zu dämpfen.“ Er fährt fort: „Wir wissen auch gar nicht, ob es diesen preisdämpfenden Effekt wirklich gibt. Dazu gab es keine umfassenden Untersuchungen.“
+
+
+Wirtschaftsprofessor Manuel Frondel (61, RWI Essen) meint in BILD gar, die neue Reiche-Regelung könnte am Ende nach hinten losgehen: „Es ist zu befürchten, dass Autofahrer in Deutschland am Ende sogar draufzahlen müssen, weil die Mineralölkonzerne bei der einmaligen Erhöhung mehr drauflegen, um ihre Einnahmen abzusichern.“
+
+"""
+
+What politicians are mentioned in the article above? What is their party? And how positive or negative is the coverage? Return a JSONL list with the following fields: name, party, score. Return only JSON. The score should be an integer between 0 and 10, with 0 being very bad and 10 being very good. Coverage that's average or uniformative should get a 5.
+Structure to return:
+[
+    {
+        "name": "...",
+        "party": "..",
+        "score": ...
+    },
+
+]</pre>
+</div>
