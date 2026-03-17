@@ -49,7 +49,7 @@ pagetitle: "Programming with AI Support"
 # Preparation {layout="bullets" data-gp-kicker="Setup / 02" data-gp-section="Plan"}
 
 * A current browser is enough to access the workshop website and materials.
-* The shared notebook lives at [../notebooks/workshop_notebook.ipynb](../notebooks/workshop_notebook.ipynb).
+* The shared notebook opens in [Google Colab](https://colab.research.google.com/github/MNoichl/workshop_AI_bamberg/blob/main/notebooks/workshop_notebook.ipynb).
 * This deck is built automatically with the rest of the workshop slides, even though the landing page does not link to it yet.
 
 
@@ -74,7 +74,7 @@ Draft work remains open.
 
 * Website: [Workshop overview](../)
 * Slides: [Introductory session deck](../slides/)
-* Notebook: [Jupyter notebook](../notebooks/workshop_notebook.ipynb)
+* Notebook: [Open in Colab](https://colab.research.google.com/github/MNoichl/workshop_AI_bamberg/blob/main/notebooks/workshop_notebook.ipynb)
 
 
 # Room and contact {layout="bullets" data-gp-kicker="Info / 04" data-gp-section="Material"}

@@ -95,7 +95,7 @@ Foundations, limits, workflows -->
 
 # How do LLMs work II {layout="bullets" data-gp-kicker="Session 1 / Foundations" data-gp-section="Session 1"}
 
-* But: Meaning is contextual! And we want to produce language!
+* But: Meaning is contextual! And we want to produce language! [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="https://arxiv.org/pdf/1706.03762.pdf"}
 * Idea 4: Use a Generative Transformer model [OPEN](#){.opens-modal data-modal-type="iframe" data-modal-url="https://poloclub.github.io/transformer-explainer/"}
 <!-- * But: This isn't very smart?
 * Idea 5: Train on *everything.*  -->
@@ -310,7 +310,7 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 # Vision / OCR models {layout="bullets" data-gp-kicker="Session 1 / Images and PDFs" data-gp-section="Session 1"}
 
-* Vision-language models often understand
+* Most LLMs today are actually vision-language models.
 * Sketch-to-graphic workflows (e.g. Nano-Banana 2, ChatGPT, etc. ) [SKETCH](#){.opens-modal data-modal-type="image" data-modal-url="images/manual_Sketch#.jpeg"} [CLEANED](#){.opens-modal data-modal-type="image" data-modal-url="images/cleaned_up_sketch.jpeg"}.
 * Diagram to SVG/LaTeX, then fix manually.
 * VLM based OCR models (e.g. OLM OCR, Chandra, etc. ) easily beat old-school.
@@ -325,6 +325,12 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 # Usage as scientists {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
 
+* LLMs can do data-labelling on complex categories very well.
+* Validate inter-rater agreement like usual, then scale up. 
+* Usage via APIs or locally for sensitive data.
+* Set spending limits & alerts!
+
+<!-- 
 * Data labeling is already a real research use case when you provide a codebook, examples, and a clear output schema.
 * Spot-check aggressively: good label accuracy does not automatically imply valid downstream inference.
 * Research use improves a lot once you move beyond the chat box and into APIs, scripts, and reproducible workflows.
@@ -334,7 +340,7 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
   - stabilize in scripts
   - evaluate on held-out examples
   - add human review where mistakes are costly
-  - document prompts, model versions, and failure cases
+  - document prompts, model versions, and failure cases -->
 
 
 # Practical closing slide {layout="bullets" data-gp-kicker="Session 1 / Takeaways" data-gp-section="Session 1"}
@@ -350,7 +356,7 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 * Website: [Workshop overview](../)
 * Slides: [Introductory session deck](../slides/)
-* Notebook: [Jupyter notebook](../notebooks/workshop_notebook.ipynb)
+* Notebook: [Open in Colab](https://colab.research.google.com/github/MNoichl/workshop_AI_bamberg/blob/main/notebooks/workshop_notebook.ipynb)
 
 
 # Room and contact {layout="bullets" data-gp-kicker="Info / 04" data-gp-section="Material"}
