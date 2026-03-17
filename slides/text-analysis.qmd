@@ -2,11 +2,6 @@
 pagetitle: "Text Analysis with AI Support"
 ---
 
-<!--
-Session 2 starter deck.
-Keep draft comments in place while building out this workshop block.
--->
-
 # Text Analysis with AI Support {layout="title" data-gp-kicker="WORKSHOP / BAMBERG" data-gp-section="Opening"}
 
 <div class="gp-title-above">Workshop / Session 2</div>
@@ -17,6 +12,9 @@ Keep draft comments in place while building out this workshop block.
 ::: {.gp-subtitle}
 <span>Thursday, March 19, 2026 · 09:30-12:00</span>
 :::
+
+<!-- Session 2 starter deck. -->
+<!-- Keep draft comments in place while building out this workshop block. -->
 
 ::: {.gp-meta-grid}
 ::: {.gp-block}

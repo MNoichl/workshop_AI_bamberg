@@ -2,11 +2,6 @@
 pagetitle: "Programming with AI Support"
 ---
 
-<!--
-Session 3 starter deck.
-Keep draft comments in place while building out this workshop block.
--->
-
 # Programming with AI Support {layout="title" data-gp-kicker="WORKSHOP / BAMBERG" data-gp-section="Opening"}
 
 <div class="gp-title-above">Workshop / Session 3</div>
@@ -17,6 +12,9 @@ Keep draft comments in place while building out this workshop block.
 ::: {.gp-subtitle}
 <span>Thursday, March 19, 2026 · 13:00-15:30</span>
 :::
+
+<!-- Session 3 starter deck. -->
+<!-- Keep draft comments in place while building out this workshop block. -->
 
 ::: {.gp-meta-grid}
 ::: {.gp-block}

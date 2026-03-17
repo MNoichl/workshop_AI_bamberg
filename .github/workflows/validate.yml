@@ -22,6 +22,7 @@ jobs:
           test -f slides/index.qmd
           test -f slides/text-analysis.qmd
           test -f slides/programming.qmd
+          test -f slides/qrcode.html
           test -f notebooks/workshop_notebook.ipynb
 
       - name: Render slides

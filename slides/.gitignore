@@ -4,6 +4,7 @@
 !README.md
 !_quarto.yml
 !*.bib
+!qrcode.html
 !index.qmd
 !text-analysis.qmd
 !programming.qmd

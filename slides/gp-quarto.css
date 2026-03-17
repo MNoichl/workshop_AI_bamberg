@@ -503,20 +503,16 @@
 /* QR side-card variant used in the Quarto demo deck. */
 .reveal .slides section.gp-half .gp-two-col--qr {
   grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
-  align-items: start;
+  align-items: stretch;
 }
 
-.reveal .slides section.gp-half .gp-figure--qr .gp-frame {
-  padding: 0;
-  background: transparent;
-  display: grid;
-  place-items: center;
-  line-height: 0;
+.reveal .slides section.gp-half .gp-figure--qr {
+  margin: 0;
+  width: 100%;
   aspect-ratio: 1 / 1;
-  overflow: hidden;
 }
 
-.reveal .slides section.gp-half .gp-figure--qr .gp-frame-embed {
+.reveal .slides section.gp-half .gp-figure--qr .gp-qr-embed {
   display: block;
   width: 100% !important;
   height: 100% !important;

@@ -5,17 +5,15 @@ cite-method: citeproc
 link-citations: false
 ---
 
-<!--
-Imported into Quarto deck format from `ai_for_research_workshop_slides.md`.
-Keep the draft file in place for continued work on comments and source notes.
--->
-
 # Introductory Session {layout="title" data-gp-kicker="WORKSHOP / BAMBERG" data-gp-section="Opening"}
 
 <div class="gp-title-above">Workshop / Session 1</div>
 <div class="gp-code">AI FOR RESEARCH</div>
 <div class="gp-title-below">Foundations, limits, workflows</div>
 <!-- <div class="gp-accent-bar" data-gp-underline="tag" aria-hidden="true"></div> -->
+
+<!-- Imported into Quarto deck format from `ai_for_research_workshop_slides.md`. -->
+<!-- Keep the draft file in place for continued work on comments and source notes. -->
 
 
 
@@ -56,7 +54,7 @@ Keep the draft file in place for continued work on comments and source notes.
 :::: {.columns .gp-two-col .gp-two-col--qr}
 ::: {.column width="62%"}
 
-* Website: [https://maxnoichl.github.io/workshop_AI_bamberg/](https://maxnoichl.github.io/workshop_AI_bamberg/)
+* Website: [https://mnoichl.github.io/workshop_AI_bamberg/](https://mnoichl.github.io/workshop_AI_bamberg/)
 * For text analysis: Google-account for access to Colab.
 * For introductiong & AI-assissted programming: Subscription to Chat-GPT or Claude
 
@@ -64,9 +62,7 @@ Keep the draft file in place for continued work on comments and source notes.
 ::: {.column width="38%"}
 
 ::: {.gp-figure .gp-figure--qr}
-::: {.gp-frame}
-<iframe src="qrcode.html?url=https%3A%2F%2Fmaxnoichl.github.io%2Fworkshop_AI_bamberg%2F" title="QR code to workshop website"></iframe>
-:::
+<iframe class="gp-qr-embed" src="qrcode.html?url=https%3A%2F%2Fmnoichl.github.io%2Fworkshop_AI_bamberg%2F" title="QR code to workshop website"></iframe>
 :::
 
 :::
@@ -79,11 +75,12 @@ Foundations, limits, workflows -->
 
 
 # Plan: AI for Research {layout="bullets" data-gp-kicker="Session 1 / Scope" data-gp-section="Session 1"}
-* AI = mainly LLMs
+* AI = mainly LLMs (for today)
 * How do LLMs work?
-* What are they good at?
-* Where do they break?
-* Impulses.
+* How to think about them?
+* Econ & Ethics
+* Usage for research.
+* Usage for actual science.
 
 
 # How do LLMs work I {layout="bullets" data-gp-kicker="Session 1 / Foundations" data-gp-section="Session 1"}
