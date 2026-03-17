@@ -166,8 +166,10 @@ figure {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 13px 14px;
   border: 2px solid var(--rule);
+  box-sizing: border-box;
   font-family: var(--mono);
   font-size: 0.92rem;
   font-weight: 600;
@@ -185,7 +187,7 @@ figure {
 .resource-card--disabled {
   color: rgba(10, 10, 10, 0.45);
   border-color: rgba(0, 0, 0, 0.28);
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(0, 0, 0, 0.06);
 }
 
 .quick-link--disabled::after {
@@ -204,7 +206,7 @@ figure {
 .resource-card--disabled:hover,
 .resource-card--disabled:focus-visible {
   transform: none;
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(0, 0, 0, 0.06);
 }
 
 .page-main {
