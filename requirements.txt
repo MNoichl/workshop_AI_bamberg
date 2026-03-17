@@ -1,0 +1,2 @@
+# Hugging Face Spaces installs Gradio separately for the selected SDK/runtime.
+# This app only needs the runtime-provided Gradio plus the Python standard library.

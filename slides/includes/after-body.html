@@ -2,15 +2,20 @@
 (function waitForReveal(){
     if (!window.Reveal || !Reveal.on) return setTimeout(waitForReveal, 30);
 
-    // Open when the inline modal fragment becomes visible (forward OR backward)
+    // Default: only auto-open a modal when the revealed fragment is the modal
+    // trigger itself, or an explicit wrapper fragment opts in with
+    // data-modal-auto="true". Parent bullet fragments do not auto-open child
+    // modal links anymore.
     Reveal.on('fragmentshown', (e) => {
+        let trigger = null;
+
         if (e.fragment.classList.contains('opens-modal')) {
-            e.fragment.click();
-            return;
+            trigger = e.fragment;
+        } else if (e.fragment.dataset && e.fragment.dataset.modalAuto === 'true') {
+            trigger = e.fragment.querySelector && e.fragment.querySelector('.opens-modal');
         }
-        const trigger = e.fragment.querySelector && e.fragment.querySelector('.opens-modal');
+
         if (!trigger) return;
-        if (trigger.classList.contains('fragment') && !trigger.classList.contains('current-fragment')) return;
         trigger.click();
     });
 
@@ -24,61 +29,5 @@
             document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
         }
     }, { capture: true });
-})();
-</script>
-
-<script>
-(function waitForFigureNumbering() {
-    const normalizeCaption = (text) => {
-        return String(text || "")
-            .replace(/^FIG\.\s*\d+\s*[-.:]\s*/i, "")
-            .replace(/^FIG\.\s*[-.:]\s*/i, "")
-            .replace(/^FIG\.\s*/i, "")
-            .trim();
-    };
-
-    const isManualCaption = (node) => {
-        if (!(node instanceof HTMLElement)) return false;
-        if (!/^(DIV|P|FIGCAPTION)$/.test(node.tagName)) return false;
-        const text = node.textContent.replace(/\s+/g, " ").trim();
-        return /^FIG\./i.test(text);
-    };
-
-    const renumber = () => {
-        const slideRoot = document.querySelector(".reveal .slides");
-        if (!slideRoot) return;
-
-        let count = 0;
-        const nodes = Array.from(
-            slideRoot.querySelectorAll("figure.gp-figure figcaption, .gp-half-exhibit figcaption, .gp-filters .gp-figure figcaption, div, p")
-        ).filter((node) => {
-            if (!(node instanceof HTMLElement)) return false;
-            if (node.closest(".gp-cites")) return false;
-            if (node.matches("figcaption")) return true;
-            return isManualCaption(node);
-        });
-
-        for (const node of nodes) {
-            const base = node.dataset.gpFigureBase || normalizeCaption(node.textContent);
-            if (!base) continue;
-            node.dataset.gpFigureBase = base;
-            count += 1;
-            node.textContent = `FIG. ${String(count).padStart(2, "0")} - ${base}`;
-        }
-    };
-
-    const boot = () => {
-        renumber();
-        if (window.Reveal && Reveal.on) {
-            Reveal.on("ready", renumber);
-            Reveal.on("slidechanged", renumber);
-        }
-    };
-
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", boot, { once: true });
-    } else {
-        boot();
-    }
 })();
 </script>

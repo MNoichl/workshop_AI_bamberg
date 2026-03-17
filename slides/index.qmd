@@ -1,5 +1,8 @@
 ---
-pagetitle: "AI Tools for Research"
+pagetitle: "Introductory Session: AI for Research"
+bibliography: CompTemp.bib
+cite-method: citeproc
+link-citations: false
 ---
 
 <!--
@@ -7,36 +10,36 @@ Imported into Quarto deck format from `ai_for_research_workshop_slides.md`.
 Keep the draft file in place for continued work on comments and source notes.
 -->
 
-# AI Tools for Research {layout="title" data-gp-kicker="WORKSHOP / BAMBERG" data-gp-section="Opening"}
+# Introductory Session {layout="title" data-gp-kicker="WORKSHOP / BAMBERG" data-gp-section="Opening"}
 
-<div class="gp-title-above">Workshop plan</div>
-<div class="gp-code">AI TOOLS</div>
-<div class="gp-title-below">for research</div>
-<div class="gp-accent-bar" data-gp-underline="tag" aria-hidden="true"></div>
+<div class="gp-title-above">Workshop / Session 1</div>
+<div class="gp-code">AI FOR RESEARCH</div>
+<div class="gp-title-below">Foundations, limits, workflows</div>
+<!-- <div class="gp-accent-bar" data-gp-underline="tag" aria-hidden="true"></div> -->
 
-::: {.gp-subtitle}
-<span>March 18-19, 2026</span>
-:::
 
-::: {.gp-meta-grid}
-::: {.gp-block}
-<span class="gp-label">Wed</span> March 18, 2026 · 14:00-16:30
-:::
-::: {.gp-block}
-<span class="gp-label">Thu</span> March 19, 2026 · 09:30-12:00
-:::
-::: {.gp-block}
-<span class="gp-label">Thu</span> March 19, 2026 · 13:00-15:30
-:::
-:::
+
+
+# About Me {layout="bullets"}
+
+* Max Noichl, doctoral candidate in theoretical philosophy at Utrecht University.
+* Philosophy of machine learning. [OPEN](#){.opens-modal data-modal-type="iframe" data-modal-url="images/2508.15929v1.pdf"}
+* Data-driven methods for philosophy.
+* Computational Metaphilosophy [OPEN](#){.opens-modal data-modal-type="iframe" data-modal-url="images/Reason___Intuition.pdf"}
+* OpenAlex Mapper [OPEN](#){.opens-modal data-modal-type="iframe" data-modal-url="https://maxnoichl-openalex-mapper.hf.space"}
+<!-- * Scientific Model Transfer [OPEN](#){.opens-modal data-modal-type="iframe" data-modal-url="images/model_transfer.pdf"} -->
+* Simulations for social epistemology.
+* Doing philosophy with AI.
+
+
 
 
 # Overview {layout="outline" data-gp-kicker="Workshop / Overview" data-gp-section="Plan"}
 
-* Three connected workshop sessions across March 18 and 19, 2026.
-* Session 1 now includes the imported first-draft deck in Quarto format.
-* Session 2 and Session 3 remain in place as section starters for continued build-out.
-* The workshop website bundles schedule, slides, and notebook in one place.
+* This is the first of three connected workshop sessions across March 18 and 19, 2026.
+* Session 1 covers LLM foundations, limits, audio, OCR, and practical research workflows.
+* Session 2 and Session 3 now live in separate deck files for continued drafting.
+* The workshop website bundles the landing page, slides, and notebook in one place.
 
 
 # Schedule {layout="table" data-gp-kicker="Agenda / 01" data-gp-section="Plan"}
@@ -48,175 +51,279 @@ Keep the draft file in place for continued work on comments and source notes.
 | Thu, March 19, 2026 | 13:00-15:30 | Programming | Prompting, debugging, and notebook-based coding with AI support |
 
 
-# Preparation {layout="bullets" data-gp-kicker="Setup / 02" data-gp-section="Plan"}
+# Preparation {layout="half" data-gp-kicker="Setup / 02" data-gp-section="Plan"}
 
-* A current browser is enough to access the workshop website and materials.
-* The Jupyter notebook lives at [../notebooks/workshop_notebook.ipynb](../notebooks/workshop_notebook.ipynb) and can later be replaced in place.
-* The slide deck is published under [../slides/](../slides/) on GitHub Pages.
+:::: {.columns .gp-two-col .gp-two-col--qr}
+::: {.column width="62%"}
 
+* Website: [https://maxnoichl.github.io/workshop_AI_bamberg/](https://maxnoichl.github.io/workshop_AI_bamberg/)
+* For text analysis: Google-account for access to Colab.
+* For introductiong & AI-assissted programming: Subscription to Chat-GPT or Claude
 
+:::
+::: {.column width="38%"}
+
+::: {.gp-figure .gp-figure--qr}
+::: {.gp-frame}
+<iframe src="qrcode.html?url=https%3A%2F%2Fmaxnoichl.github.io%2Fworkshop_AI_bamberg%2F" title="QR code to workshop website"></iframe>
+:::
+:::
+
+:::
+::::
+
+<!-- 
 # Introductory Session: AI for Research {layout="divider" data-gp-kicker="Session 1 / Wed, March 18" data-gp-section="Session 1"}
 
-Foundations, limits, workflows
+Foundations, limits, workflows -->
 
 
-# AI for Research {layout="bullets" data-gp-kicker="Session 1 / Scope" data-gp-section="Session 1"}
-
+# Plan: AI for Research {layout="bullets" data-gp-kicker="Session 1 / Scope" data-gp-section="Session 1"}
+* AI = mainly LLMs
 * How do LLMs work?
 * What are they good at?
 * Where do they break?
-* How should researchers and scientists use them?
+* Impulses.
 
 
-# How do LLMs work {layout="bullets" data-gp-kicker="Session 1 / Foundations" data-gp-section="Session 1"}
+# How do LLMs work I {layout="bullets" data-gp-kicker="Session 1 / Foundations" data-gp-section="Session 1"}
 
-* Most modern LLMs are Transformer models trained to predict tokens from context.
-* Core training recipe:
-  - break text into tokens
-  - train on very large corpora
-  - predict next tokens or reconstruct masked ones
-* Good next-token prediction requires internal representations of syntax, facts, style, and rough world structure.
-* GPT-style models are usually autoregressive generators; BERT-style models are usually bidirectional encoders.
-* Post-training matters a great deal: instruction tuning, preference tuning, tool use, retrieval, and system prompts.
-* The model only sees a limited context window unless external memory is added around it.
-* Paper: [ATTENTION IS ALL YOU NEED](#){.opens-modal data-modal-type="iframe" data-modal-url="https://arxiv.org/pdf/1706.03762.pdf"}
+* How to teach a computer language?
+* Idea 1: Just enumerate all the words (BOW-Models, topic models)
+* But: Words have meaning!
+* Idea 2: Use word vectors (E.g. Word2Vec)
+* But: Grammar!
+* Idea 3: Split words into tokens (E.g. fastText)
 
 
-# Perspectives on LLMs {layout="half" data-gp-fragments="off" data-gp-kicker="Session 1 / Lenses" data-gp-section="Session 1"}
+# How do LLMs work II {layout="bullets" data-gp-kicker="Session 1 / Foundations" data-gp-section="Session 1"}
 
-:::: {.columns}
+* But: Meaning is contextual! And we want to produce language!
+* Idea 4: Use a Generative Transformer model [OPEN](#){.opens-modal data-modal-type="iframe" data-modal-url="https://poloclub.github.io/transformer-explainer/"}
+<!-- * But: This isn't very smart?
+* Idea 5: Train on *everything.*  -->
+* But: This is awful!
+* Idea 5: Use reinforcement learning from Human Feedback (RLHF)
+
+
+
+
+
+
+
+# Perspectives on LLMs {layout="half" .gp-perspectives data-gp-fragments="off" data-gp-kicker="Session 1 / Lenses" data-gp-section="Session 1"}
+
+:::: {.columns .gp-two-col .gp-two-col--perspectives}
 ::: {.column width="48%"}
 
-<ul style="list-style: none; padding-left: 0; margin-top: 12px;">
-<li class="fragment" data-fragment-index="0" style="margin: 10px 0; padding-left: 1.35em; line-height: 1.28; font-family: var(--gp-mono); font-size: 0.71em;">LLMs are <strong>"stochastic parrots"</strong> - fancy autocomplete <a href="#" class="opens-modal" data-modal-type="iframe" data-modal-url="https://upload.wikimedia.org/wikipedia/commons/f/f2/On_the_Dangers_of_Stochastic_Parrots_Can_Language_Models_Be_Too_Big.pdf">OPEN</a></li>
-<li class="fragment" data-fragment-index="1" style="margin: 10px 0; padding-left: 1.35em; line-height: 1.28; font-family: var(--gp-mono); font-size: 0.71em;">But <strong>next-token prediction is hard</strong>, so strong performance can still imply nontrivial structure tracking.</li>
-<li class="fragment" data-fragment-index="2" style="margin: 10px 0; padding-left: 1.35em; line-height: 1.28; font-family: var(--gp-mono); font-size: 0.71em;">LLMs can be viewed as <strong>lossy compression</strong>: compact models of regularities in text.</li>
-<li class="fragment" data-fragment-index="3" style="margin: 10px 0; padding-left: 1.35em; line-height: 1.28; font-family: var(--gp-mono); font-size: 0.71em;">LLMs are <strong>shoggoths</strong>: a polished interface over something opaque, alien, and difficult to align.</li>
-</ul>
+::: {.fragment .gp-perspectives-item data-fragment-index="0"}
+LLMs are **"stochastic parrots"**/autocomplete systems.
+:::
+
+[OPEN PDF](#){.fragment .opens-modal .gp-perspectives-link data-fragment-index="1" data-modal-type="iframe" data-modal-url="https://upload.wikimedia.org/wikipedia/commons/f/f2/On_the_Dangers_of_Stochastic_Parrots_Can_Language_Models_Be_Too_Big.pdf"}
+
+::: {.fragment .gp-perspectives-item data-fragment-index="2"}
+But: Predicting the next token is *hard* ("the culprit is ___")
+:::
+
+::: {.fragment .gp-perspectives-item data-fragment-index="3"}
+LLMs as **lossy compression**.
+:::
+
+::: {.fragment .gp-perspectives-item data-fragment-index="4"}
+LLMs as **shoggoths**: polished interfaces over something opaque, alien, and difficult to align. [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/shoggoth_classic.jpeg"}
+:::
 
 :::
 ::: {.column width="52%"}
 
-<div style="position: relative; width: 680px; height: 680px; margin: 0 auto;">
-<div class="fragment fade-in-then-out" data-fragment-index="0" style="position: absolute; inset: 0;">
-<div style="border: 2px solid var(--gp-ink); overflow: hidden; width: 680px; height: 680px;">
-<div class="gp-media gp-halftone" data-gp-halftone="cmyk" data-gp-preset="newspaper" style="width: 100%; height: 100%;">
-<img src="media/perspective-parrot.jpg" class="gp-frame-img gp-img-tone-bw" alt="Close portrait of a parrot" />
-</div>
-</div>
-<div style="font-family: var(--gp-mono); font-size: 13px; color: var(--gp-ink2); margin-top: 6px;">FIG. - Stochastic parrot</div>
-</div>
-<div class="fragment fade-in-then-out" data-fragment-index="1" style="position: absolute; inset: 0;">
-<div style="border: 2px solid var(--gp-ink); overflow: hidden; width: 680px; height: 680px;">
-<div class="gp-media gp-halftone" data-gp-halftone="cmyk" data-gp-preset="newspaper" style="width: 100%; height: 100%;">
-<img src="media/perspective-detective.jpg" class="gp-frame-img gp-img-tone-bw" alt="Detective scene around a table" />
-</div>
-</div>
-<div style="font-family: var(--gp-mono); font-size: 13px; color: var(--gp-ink2); margin-top: 6px;">FIG. - The detective-novel view</div>
-</div>
-<div class="fragment fade-in-then-out" data-fragment-index="2" style="position: absolute; inset: 0;">
-<div style="border: 2px solid var(--gp-ink); overflow: hidden; width: 680px; height: 680px;">
-<div class="gp-media gp-halftone" data-gp-halftone="cmyk" data-gp-preset="newspaper" style="width: 100%; height: 100%;">
-<img src="media/perspective-compression.jpg" class="gp-frame-img gp-img-tone-bw" alt="Tight stack of books as compression metaphor" />
-</div>
-</div>
-<div style="font-family: var(--gp-mono); font-size: 13px; color: var(--gp-ink2); margin-top: 6px;">FIG. - Compression</div>
-</div>
-<div class="fragment fade-in" data-fragment-index="3" style="position: absolute; inset: 0;">
-<div style="border: 2px solid var(--gp-ink); overflow: hidden; width: 680px; height: 680px;">
-<div class="gp-media gp-halftone" data-gp-halftone="cmyk" data-gp-preset="newspaper" style="width: 100%; height: 100%;">
-<img src="media/perspective-shoggoth.jpg" class="gp-frame-img gp-img-tone-bw" alt="Underwater octopus as shoggoth metaphor" />
-</div>
-</div>
-<div style="font-family: var(--gp-mono); font-size: 13px; color: var(--gp-ink2); margin-top: 6px;">FIG. - Shoggoth metaphor</div>
-</div>
-</div>
+::: {.gp-perspectives-visual}
+::: {.fragment .fade-in .gp-perspectives-panel data-fragment-index="0"}
+::: {.gp-perspectives-frame}
+::: {.gp-media .gp-halftone data-gp-halftone="cmyk" data-gp-preset="newspaper"}
+![](media/perspective-parrot.jpg){.gp-frame-img .gp-img-tone-bw alt="Close portrait of a parrot"}
+:::
+:::
+:::
+
+::: {.fragment .fade-in .gp-perspectives-panel data-fragment-index="2"}
+::: {.gp-perspectives-frame}
+::: {.gp-media .gp-halftone data-gp-halftone="cmyk" data-gp-preset="newspaper"}
+![](media/perspective-detective.jpg){.gp-frame-img .gp-img-tone-bw alt="Detective scene around a table"}
+:::
+:::
+:::
+
+::: {.fragment .fade-in .gp-perspectives-panel data-fragment-index="3"}
+::: {.gp-perspectives-frame}
+::: {.gp-media .gp-halftone data-gp-halftone="cmyk" data-gp-preset="newspaper"}
+![](media/perspective-compression.jpg){.gp-frame-img .gp-img-tone-bw alt="Tight stack of books as compression metaphor"}
+:::
+:::
+:::
+
+::: {.fragment .fade-in .gp-perspectives-panel data-fragment-index="4"}
+::: {.gp-perspectives-frame}
+::: {.gp-media .gp-halftone data-gp-halftone="cmyk" data-gp-preset="newspaper"}
+![](media/perspective-shoggoth.jpg){.gp-frame-img .gp-img-tone-bw alt="Underwater octopus as shoggoth metaphor"}
+:::
+:::
+:::
+:::
 
 :::
 ::::
 
 
 
-# A Note on Names {layout="bullets" data-gp-kicker="Session 1 / Vocabulary" data-gp-section="Session 1"}
+# Terminology {layout="bullets" data-gp-kicker="Session 1 / Vocabulary" data-gp-section="Session 1"}
 
-* Separate architectures, models, products, and companies.
-* Architectures:
-  - GPT names a style of autoregressive Transformer language model.
-  - BERT names a bidirectional encoder architecture.
-* Models are the concrete systems released by labs and vendors.
-* Current examples include the GPT-5 line, Claude 4.6 models, Gemini 2.5 models, and open-model families such as Llama, Mistral, and DeepSeek.
-* Products such as ChatGPT wrap models with tools, memory, safety layers, interfaces, and billing plans.
-* In practice, latency, context length, tool support, cost, modality, and hardware footprint matter more than published parameter counts.
+* **Architectures**: GPT (Generative Pretraining Transformer), BERT (Bidirectional Encoder Representations from Transformers), etc.
+* **Companies**: OpenAI, Anthropic, Google, NVIDIA, Mistral, DeepSeek, Meta, Alibaba, etc.
+* **Specific Models/families**: GPT-4o, GPT-5.4, o1, o3;  Claude Haiku, Sonnet, Opus; Gemini & nano-banana; etc.
+* **Open/local model families**: Llama, Mistral, DeepSeek, Qwen, Kimi, gpt-oss....
+* **Products**: ChatGPT, Claude Code, Perplexity, Gemini, etc.
+
+
+
+# How smart are they? I {layout="bullets" data-gp-kicker="Session 1 / Limits" data-gp-section="Session 1"}
+
+* They can solve difficult tasks and still fail on surprisingly small ones.
+* Exercise: How many r's in "strawberry"? [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/strawberry.png"}
+* Problem: Tokenization.
+* Car-wash problem. [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/carwash.png"}
+* Problem: Conversational context.
+* Note: These things get hot-fixed!
+
+
+
+# How smart are they? II {layout="bullets" data-gp-kicker="Session 1 / Limits" data-gp-section="Session 1"}
+
+* Hallucinations.
+* ARC-style benchmarks try to test abstract reasoning on tasks that are easy for humans but hard for AI.
+* The capability frontier is **jagged**: performance is uneven across neighboring tasks. [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/capability_frontier.jpeg"}
+* But maybe that's the case for humans too?
+
+
 
 
 # Extending LLMs {layout="bullets" data-gp-kicker="Session 1 / Systems" data-gp-section="Session 1"}
 
-* Retrieval-augmented generation gives the model external documents at answer time.
-* For grounded question-answering over specific materials, RAG can matter more than swapping to a smarter base model.
-* A major current trend is spending more compute at inference time with reasoning models.
-* Agents combine models with tools, memory, state, and a control loop.
-* The harness around the model matters: retries, permissions, logging, evaluation, state management, and cost controls.
-* The command line matters because many real research workflows reduce to files, scripts, tests, package managers, and shell tools.
+* **Retrieval-augmented generation (RAG)** adds material to context via search.
+* **Reasoning models:** generate tokens before answering (test-time compute) [OPEN](#){.opens-modal data-modal-type="image" data-modal-url="images/test_time_compute.png"}
+* **Agents:** combine models with tools, memory, state, and a control loop.
+* **Harness**: retries, permissions, logging, cost control.
+*  **Command line use:** token efficient search, shell scripting etc.
 
 
-# How smart are they {layout="bullets" data-gp-kicker="Session 1 / Limits" data-gp-section="Session 1"}
-
-* They can solve difficult tasks and still fail on surprisingly small ones.
-* The "strawberry" example became famous because token systems can lose direct access to character-level structure.
-* Vision-language systems can also fail on adversarial color and perception tasks that are easy for humans.
-* Context is everything: niche domains, multilingual ambiguity, and hidden assumptions can derail a strong model.
-* ARC-style benchmarks try to test abstract reasoning on tasks that are easy for humans but hard for AI.
-* The capability frontier is jagged: performance is uneven across neighboring tasks.
+# Ethics & Economics {.gp-section-slide data-gp-section="Session 1"}
 
 
-# Ethics / Economics {layout="bullets" data-gp-kicker="Session 1 / Stakes" data-gp-section="Session 1"}
+# Economics {layout="bullets" data-gp-kicker="Session 1 / Stakes" data-gp-section="Session 1"}
 
-* Per query, the environmental impact can look modest; at system scale, energy, water, and hardware demand are substantial.
-* Copyright questions are unsettled around training data, licensing, outputs, and market substitution.
-* Frontier AI is still constrained by compute prices, hardware access, and operational overhead.
-* Cheap tokens do not imply cheap systems: evaluation, integration, review, governance, and security still cost real time and money.
-
-
-# What to do with LLMs {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
-
-* Treat the model as a configurable reviewer rather than a mysterious oracle.
-* A strong proofreading prompt specifies role, target output, constraints, and the failure modes you want the model to attack.
-* Distinguish clearly between what lives in the model weights, what is in the current context window, and what is stored in external memory.
-* This distinction is worth teaching explicitly because users often collapse all three into "the model remembers".
-* Use live examples and discussion prompts where they sharpen a workflow lesson.
+* Compute is expensive!
+* You get (maybe more than) what you pay for!
+* Self-hosting does not work near the frontier, but for specialized tasks.
+* Academic/European infrastructure has not caught up yet.
 
 
-# Uses around research {layout="bullets" data-gp-kicker="Session 1 / Research Use" data-gp-section="Session 1"}
 
-* LLMs are often good at finding the right wording when you know roughly what you mean but want sharper phrasing.
-* One of the highest-value uses is checking your work: algebra slips, hidden assumptions, causal leaps, unit errors, and edge cases.
-* They are extremely practical for getting other people's research code to run when you provide the traceback, environment, README, and target output.
-* Treat them as fast heuristic assistants, not as final authorities.
-* Tone correction is another strong use case: more direct, less passive-aggressive, warmer, or better matched to a collaborator or student.
-* Image models are increasingly useful for figures, workflows, posters, and explanatory diagrams.
+# Ethics {layout="bullets" data-gp-kicker="Session 1 / Stakes" data-gp-section="Session 1"}
+
+
+* *So many problems!*
+* Big, energy intensive, somewhat water-wasteful industry.
+* Probably not worse than everything else we do, but doesn't help either...
+* Copyright & Commons
+* Many specific issues: Labour displacement, data ethics, decision-making, etc.
+
+
+
+
+# AI in Practice {.gp-section-slide data-gp-section="Session 1"}
+
+
+# General considerations {layout="bullets" data-gp-kicker="Session 1 / Research Use" data-gp-section="Session 1"}
+
+* Prompt-engineering is over. 
+* But context matters a lot: Give it as much information as possible about what you want. 
+* Try, evaluate, iterate. 
+* Options to play with later GPT 5.4 Pro (slow), Claude Opus 4.6 (fast), GPT-oss (local & open), Gemini, Kimi & Grok (via cursor)
+
+
+# AI detection {layout="bullets" data-gp-kicker="Session 1 / Research Use" data-gp-section="Session 1"}
+
+* First-generation AI detectors were **very bad**.
+* Current SOTA detectors are **somewhat better** (E. g. [Pangram](https://pangram.com/)). [OPEN LIVE TOOL](#){.opens-modal data-modal-type="iframe" data-modal-url="https://maxnoichl-pangram-api-tester.hf.space"}
+* But still **unreliable enough** considering inductive risk!
+* **Exercise**: Ask your LLM a question & find tells. [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/Screenshot_detection.png"}
+* "It's not only X it's Y", "In practice....", "---"
+* **Exercise**: Can we fool Pangram?
+
+
+
+
+# Models as reviewers {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
+
+* Proofreading. [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/Proofread.png"}
+* Due to the "model-smell" I avoid autonomous rewrite. 
+* But: Prompt for a list of edits, than pick the ones I want works well.
+* Exercise: Review a draft or paper.  NOTE Different harshness? 
+* Looking for the *mot juste*
+* Fixing emails (also emotionally). [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/christophe_email.png"}
+
+
+# Models as reviewers II {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
+
+
+* Heuristic review of code, maths  & statistics.
+* Ask: Find the crucial error!
+* Sometimes surprising things turn up.
+* Maybe a future in review pipelines. PUT EXAMPLE?
+
+
+# Models for inquiry  {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
+
+* Autonomous research like **Deep Research** can be very helpful.
+* Limited by open access (e.g. very good for computer science.)
+* Enrich citations (which citations am I missing?)
+* Exercise: Run a deep-research on a topic you know, and on one you don't. 
+
+
+# Models for coding {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
+
+* A lot of science is amateur software development.
+* It's often easy to improve our code.
+* Throw-away websites.
+* More & better visualizations.
+* Better documentation & reproducibility.
+* Iterate faster, but beware technical debt.
+* *More tomorrow...*
+
 
 
 # Speech to text: Whisper and NVIDIA {layout="bullets" data-gp-kicker="Session 1 / Audio" data-gp-section="Session 1"}
 
+* Speech-to-text is a (basically) solved problem.
 * Live demo scratchpad: [OPEN TRANSCRIPT PAD](#){.opens-modal data-modal-type="iframe" data-modal-url="media/live-transcript-demo.html"}
-* Whisper is still a very practical default for local multilingual transcription, translation, and language identification.
-* NVIDIA is currently worth splitting into two families:
-  - Canary for multilingual speech-to-text plus speech translation, including chunked and streaming inference.
-  - Parakeet for strong ASR inside the NVIDIA / NeMo stack.
-* Research use cases: interviews, lectures, workshop recordings, meeting notes, subtitles, and oral-history material.
-* Good workflow: transcribe first, then use an LLM for cleanup, summarization, structuring, and search.
-* Always verify names, numbers, technical terms, and speaker boundaries.
-
+* Model reccommendations: Big models in the Whisper-family & NVIDIA Parakeet
+* Transcribe interviews, lectures, talks. Talk to the computer.
+* Transcribe, then cleanup with a strong LLM + prompt.
+* Only problem: Context.
 
 # Vision / OCR models {layout="bullets" data-gp-kicker="Session 1 / Images and PDFs" data-gp-section="Session 1"}
 
-* General vision-language models can often read screenshots, slides, charts, and scanned pages well enough for ad hoc research work.
-* Specialized OCR models are better when you care about document structure, tables, headers, footnotes, and large PDF batches.
-* Good uses: digitizing scans, extracting text from screenshots, reading whiteboards, pulling tables from PDFs, and making archival material searchable.
-* Current practical pattern:
-  - use a general vision model for quick "what is on this page?" questions
-  - use a dedicated OCR pipeline when structure and recall matter
-* Typical failure modes: multi-column layouts, handwriting, formulas, low-quality scans, and hallucinated table structure.
+* Vision-language models often understand
+* Sketch-to-graphic workflows (e.g. Nano-Banana 2, ChatGPT, etc. ) [SKETCH](#){.opens-modal data-modal-type="image" data-modal-url="images/manual_Sketch#.jpeg"} [CLEANED](#){.opens-modal data-modal-type="image" data-modal-url="images/cleaned_up_sketch.jpeg"}.
+* Diagram to SVG/LaTeX, then fix manually.
+* VLM based OCR models (e.g. OLM OCR, Chandra, etc. ) easily beat old-school.
+
+<!-- * Typical failure modes: multi-column layouts, handwriting, formulas, low-quality scans, and hallucinated table structure. -->
+
+
+
+# AI for science {.gp-section-slide data-gp-section="Session 1"}
+
 
 
 # Usage as scientists {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
@@ -242,30 +349,10 @@ Foundations, limits, workflows
 * The real questions are what they are good at, what kinds of errors they make, and how to build workflows that make those errors visible and manageable.
 
 
-# Text Analysis with AI Support {layout="divider" data-gp-kicker="Session 2 / Thu, March 19" data-gp-section="Session 2"}
-
-Methods, workflows, examples
-
-<!--
-Add Session 2 slides here.
-Draft work remains open.
--->
-
-
-# Programming with AI Support {layout="divider" data-gp-kicker="Session 3 / Thu, March 19" data-gp-section="Session 3"}
-
-Coding, debugging, notebooks
-
-<!--
-Add Session 3 slides here.
-Draft work remains open.
--->
-
-
 # Materials {layout="bullets" data-gp-kicker="Links / 03" data-gp-section="Material"}
 
 * Website: [Workshop overview](../)
-* Slides: [This deck](../slides/)
+* Slides: [Introductory session deck](../slides/)
 * Notebook: [Jupyter notebook](../notebooks/workshop_notebook.ipynb)
 
 

@@ -6,7 +6,9 @@ Simple repository for the Bamberg workshop website and slide deck for 18-19 Marc
 
 - `index.html`: landing page with schedule and material links.
 - `assets/site.css`: shared styling for the landing page.
-- `slides/index.qmd`: Quarto revealjs source for the workshop slides.
+- `slides/index.qmd`: Quarto revealjs source for Session 1.
+- `slides/text-analysis.qmd`: Quarto revealjs source for Session 2.
+- `slides/programming.qmd`: Quarto revealjs source for Session 3.
 - `slides/ai_for_research_workshop_slides.md`: user-authored draft/source notes for Session 1.
 - `slides/media/`: optional place for future slide-specific assets.
 - `notebooks/workshop_notebook.ipynb`: placeholder notebook that can later be replaced in-place.
@@ -26,13 +28,13 @@ This is intended to make authored slide text easier to protect while still allow
 
 ## Local preview
 
-Render the slide deck from `slides/`:
+Render all slide decks from `slides/`:
 
 ```bash
-quarto render slides/index.qmd
+quarto render slides
 ```
 
-Preview the deck locally:
+Preview a specific deck locally:
 
 ```bash
 quarto preview slides/index.qmd
@@ -42,10 +44,12 @@ The root page is plain HTML/CSS and can be opened directly in a browser.
 
 ## Deployment
 
-The GitHub Actions workflow renders the Quarto deck, copies the landing page and notebook into `_site/`, and deploys everything to GitHub Pages.
+The GitHub Actions workflow renders all three Quarto decks, copies the landing page and notebook into `_site/`, and deploys everything to GitHub Pages.
 
 The published materials live at:
 
 - `/` for the workshop landing page
-- `/slides/` for the slide deck
+- `/slides/` for the introductory deck
+- `/slides/text-analysis.html` for the text-analysis deck
+- `/slides/programming.html` for the programming deck
 - `/notebooks/workshop_notebook.ipynb` for the notebook file

@@ -110,6 +110,8 @@ Modal types commonly used:
 Notes:
 - Keep `href="#"` for modal anchors.
 - Modal trigger styling is automatic via `.gp-modal-trigger`.
+- Default auto-open behavior is conservative: modal links do not open just because a parent bullet fragment appears.
+- To auto-open on the next reveal step, put the modal anchor itself on a later fragment (or use a wrapper fragment with `data-modal-auto="true"`).
 
 ### 4) Citation Footer Apparatus
 Use `aside` blocks:
@@ -226,4 +228,3 @@ Behavior:
 - References slide is two columns (desktop) and legible.
 - Modal open/close behavior works and close button is styled correctly.
 - Half/filter/exhibit frames contain media cleanly (no clipping/blank placeholders).
-

@@ -4,6 +4,8 @@
 !README.md
 !_quarto.yml
 !index.qmd
+!text-analysis.qmd
+!programming.qmd
 !ai_for_research_workshop_slides.md
 !_extensions/
 !_extensions/**
@@ -13,6 +15,18 @@
 !gp-quarto.js
 !gp-template/
 !gp-template/**
+!images/
+images/*
+!images/shoggoth_classic.jpeg
+!images/Screenshot_detection.png
+!images/Proofread.png
+!images/christophe_email.png
+!images/test_time_compute.png
+!images/strawberry.png
+!images/carwash.png
+!images/capability_frontier.jpeg
+!images/manual_Sketch#.jpeg
+!images/cleaned_up_sketch.jpeg
 !media/
 !media/**
 

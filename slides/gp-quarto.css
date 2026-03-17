@@ -434,6 +434,63 @@
   color: var(--gp-ink2);
 }
 
+.reveal .slides section.gp-half.gp-perspectives .gp-two-col--perspectives {
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+.reveal .slides section.gp-half.gp-perspectives .gp-perspectives-item {
+  margin: 10px 0 0;
+  line-height: 1.28;
+  font-family: var(--gp-mono);
+  font-size: 0.71em;
+}
+
+.reveal .slides section.gp-half.gp-perspectives .gp-perspectives-item > p {
+  margin: 0;
+}
+
+.reveal .slides section.gp-half.gp-perspectives .gp-perspectives-link {
+  margin: 6px 0 0;
+}
+
+.reveal .slides section.gp-half.gp-perspectives .gp-perspectives-item .gp-modal-trigger,
+.reveal .slides section.gp-half.gp-perspectives .gp-perspectives-item a.opens-modal {
+  margin-left: 0.55em;
+}
+
+.reveal .slides section.gp-half.gp-perspectives .gp-perspectives-visual {
+  position: relative;
+  width: min(100%, 680px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+.reveal .slides section.gp-half.gp-perspectives .gp-perspectives-panel {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+.reveal .slides section.gp-half.gp-perspectives .gp-perspectives-frame {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--gp-ink);
+  overflow: hidden;
+}
+
+.reveal .slides section.gp-half.gp-perspectives .gp-perspectives-frame .gp-media {
+  width: 100%;
+  height: 100%;
+}
+
+.reveal .slides section.gp-half.gp-perspectives .gp-perspectives-frame .gp-frame-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .reveal .slides section.gp-filters .gp-filter-grid {
   gap: 30px;
 }

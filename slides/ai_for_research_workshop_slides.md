@@ -31,6 +31,8 @@ Deck note:
 - The crucial idea is that next-token prediction is not just memorizing phrases. To do well, the model often has to represent syntax, facts, style, and rough world structure.
 - **GPT-style models** are typically autoregressive: they generate text token by token.
 - **BERT-style models** are typically bidirectional encoders: they look left and right and are especially useful for classification, search, and representation learning.
+- Quarto deck note:
+  - add a modal explainer link to `https://poloclub.github.io/transformer-explainer/`
 - Post-training matters a lot:
   - instruction tuning
   - preference tuning / RLHF / RLAIF
@@ -204,6 +206,8 @@ Ref: turn18view18 lines 2-6
   - A big current trend is spending more compute **at inference time**.
   - Reasoning models can allocate extra internal tokens, try multiple paths, and self-correct more before answering.
   - This often helps on coding, math, planning, and multi-step problems.
+  - Quarto deck note:
+    - add a modal image link to `images/test_time_compute.png`
 - **Original:** `Agents, harnesses & the command line`
   - An agent is usually an LLM plus tools, memory, state, and a control loop.
   - A harness is the engineering scaffold around the model:
@@ -247,11 +251,15 @@ Ref: turn19view8 lines 41-41
 - **Original:** `Strawberry and colorblindness`
   - They can solve hard tasks and still fail on weirdly small ones.
   - "How many r's are in strawberry?" became famous because token-based systems can lose direct access to character-level structure.
+  - Quarto deck note:
+    - add a modal image link to `images/strawberry.png`
   - Vision-language systems can also fail on adversarial color / perception tasks that are easy for humans.
 - **Original:** `Problem of context: Autowaschanlage beispiel`
   - Context is everything.
   - Compound words, niche domains, multilingual ambiguity, and hidden assumptions can derail an otherwise strong answer.
   - If this is your own example, keep it: it is a good reminder that local context often beats general intelligence.
+  - Quarto deck note:
+    - add a modal image link to `images/carwash.png`
 - **Original:** `ARC- test`
   - ARC and ARC-AGI try to test abstract reasoning on novel tasks, not just memorized internet patterns.
   - These benchmarks are hard because they are "easy for humans, hard for AI".
@@ -259,6 +267,8 @@ Ref: turn19view8 lines 41-41
   - Better known as the **jagged** capability frontier.
   - LLM ability is uneven: excellent on some tasks, brittle on neighboring tasks that look similar to us.
   - This is one of the central facts to communicate to researchers.
+  - Quarto deck note:
+    - add a modal image link to `images/capability_frontier.jpeg`
 
 <!--
 Sources
@@ -418,6 +428,7 @@ Note: included as provided by the user.
 - **Original:** `Diagrams via Nano-Banana`
   - Image models are increasingly useful for figures, workflows, posters, and explanatory diagrams.
   - They are especially strong for iterative visual prototyping.
+  - In the Quarto deck, keep modal links for the hand-drawn sketch and the cleaned-up version side by side on this point.
 
 <!--
 Sources
@@ -436,6 +447,33 @@ URL: https://developers.openai.com/cookbook/examples/gpt-5/gpt-5_prompting_guide
 Quote: "Prompted planning is likewise more important"
 Ref: turn23search22
 Note: useful as backing for structured proofreading and code-debugging prompt setups.
+-->
+
+---
+
+# AI detection in practice
+
+- New workshop note:
+  - First-generation AI detectors were very bad.
+  - Current detectors are somewhat better.
+  - Quarto deck note:
+    - point the live Pangram modal to `https://maxnoichl-pangram-api-tester.hf.space`
+  - They are still unreliable enough that they should not be treated as proof on their own.
+  - Make the "tells" point into an exercise:
+    - identify the tells
+    - but do not stop at phrase X
+    - ask why it is written that way
+    - ask how the claims connect
+    - ask whether the author can explain the passage
+  - Quarto deck note:
+    - add a modal screenshot link to `images/Screenshot_detection.png`
+
+<!--
+Author note
+
+- Keep this practical and skeptical.
+- Run this as an in-room exercise rather than a detector claim.
+- Good place for a live example or a short detector screenshot later.
 -->
 
 ---

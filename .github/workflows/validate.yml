@@ -20,8 +20,10 @@ jobs:
           test -f index.html
           test -f assets/site.css
           test -f slides/index.qmd
+          test -f slides/text-analysis.qmd
+          test -f slides/programming.qmd
           test -f notebooks/workshop_notebook.ipynb
 
       - name: Render slides
         working-directory: slides
-        run: quarto render index.qmd
+        run: quarto render
