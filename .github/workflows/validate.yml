@@ -1,0 +1,27 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Validate repository structure
+        run: |
+          test -f index.html
+          test -f assets/site.css
+          test -f slides/index.qmd
+          test -f notebooks/workshop_notebook.ipynb
+
+      - name: Render slides
+        working-directory: slides
+        run: quarto render index.qmd

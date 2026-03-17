@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Live Transcript Pad</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f4efe4;
+      --paper-2: #fbf8f1;
+      --ink: #111111;
+      --ink-2: #444444;
+      --accent: #d6c6a5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(135deg, rgba(17, 17, 17, 0.08), transparent 45%),
+        linear-gradient(180deg, var(--paper-2), var(--paper));
+      color: var(--ink);
+      font-family: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0 0 1rem;
+      color: var(--ink-2);
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      line-height: 1.5;
+    }
+
+    .frame {
+      border: 3px solid var(--ink);
+      background: rgba(255, 255, 255, 0.55);
+      padding: 1rem;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.9rem;
+    }
+
+    button {
+      appearance: none;
+      border: 2px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper-2);
+      padding: 0.65rem 0.95rem;
+      font: inherit;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    button.secondary {
+      background: transparent;
+      color: var(--ink);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 58vh;
+      resize: vertical;
+      border: 3px solid var(--ink);
+      padding: 1rem;
+      background: var(--paper-2);
+      color: var(--ink);
+      font: 1rem/1.5 "IBM Plex Mono", ui-monospace, monospace;
+    }
+
+    .stats {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0.75rem;
+      color: var(--ink-2);
+      font: 0.9rem/1.4 "IBM Plex Mono", ui-monospace, monospace;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Live Transcript Pad</h1>
+    <p>Type or paste live transcript text here during the Whisper / NVIDIA speech-to-text demo. The contents are stored locally in this browser.</p>
+    <div class="frame">
+      <div class="controls">
+        <button id="copy">Copy</button>
+        <button id="download" class="secondary">Download .txt</button>
+        <button id="clear" class="secondary">Clear</button>
+      </div>
+      <textarea id="pad" placeholder="Paste transcript output here..."></textarea>
+      <div class="stats">
+        <span id="chars">0 chars</span>
+        <span id="words">0 words</span>
+        <span id="lines">0 lines</span>
+      </div>
+    </div>
+  </main>
+  <script>
+    (function () {
+      const storageKey = "ai-research-live-transcript-pad";
+      const pad = document.getElementById("pad");
+      const chars = document.getElementById("chars");
+      const words = document.getElementById("words");
+      const lines = document.getElementById("lines");
+      const copy = document.getElementById("copy");
+      const clear = document.getElementById("clear");
+      const download = document.getElementById("download");
+
+      function updateStats() {
+        const text = pad.value;
+        const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
+        const lineCount = text ? text.split(/\n/).length : 0;
+        chars.textContent = `${text.length} chars`;
+        words.textContent = `${wordCount} words`;
+        lines.textContent = `${lineCount} lines`;
+      }
+
+      function save() {
+        localStorage.setItem(storageKey, pad.value);
+        updateStats();
+      }
+
+      pad.value = localStorage.getItem(storageKey) || "";
+      updateStats();
+      pad.focus();
+
+      pad.addEventListener("input", save);
+
+      copy.addEventListener("click", async function () {
+        try {
+          await navigator.clipboard.writeText(pad.value);
+          copy.textContent = "Copied";
+          setTimeout(() => {
+            copy.textContent = "Copy";
+          }, 1200);
+        } catch (err) {
+          copy.textContent = "Copy failed";
+          setTimeout(() => {
+            copy.textContent = "Copy";
+          }, 1200);
+        }
+      });
+
+      clear.addEventListener("click", function () {
+        pad.value = "";
+        save();
+        pad.focus();
+      });
+
+      download.addEventListener("click", function () {
+        const blob = new Blob([pad.value], { type: "text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "live-transcript.txt";
+        link.click();
+        URL.revokeObjectURL(url);
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,529 @@
+/* Quarto bridge overrides: force template parity over Quarto defaults. */
+
+:root {
+  --r-controls-color: #0a0a0a;
+  --r-link-color: #0a0a0a;
+  --r-link-color-hover: #000;
+  --r-selection-background-color: rgba(10, 10, 10, 0.2);
+}
+
+/* 1) UI chrome parity: remove Quarto menu button + side menu. */
+.reveal .slide-menu-button,
+.reveal .slide-menu-wrapper,
+.reveal .quarto-navigation-tool {
+  display: none !important;
+}
+
+/* Keep controls black and unobtrusive. */
+.reveal .controls {
+  color: #0a0a0a !important;
+}
+
+.reveal .controls button {
+  color: #0a0a0a !important;
+  opacity: 0.82;
+}
+
+.reveal .controls button.enabled {
+  opacity: 0.96;
+}
+
+.reveal .controls .controls-arrow {
+  border-color: currentColor !important;
+}
+
+/* 3) Heading scale mapping: Quarto emits h1 for slide titles; map to template layout scale. */
+.reveal .slides section.gp-slide:not(.gp-divider):not(.gp-claim):not(.gp-title) > h1 {
+  font-size: 54px;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+}
+
+.reveal .slides section.gp-title > h1.gp-title-heading,
+.reveal .slides section[data-layout="title"] > h1,
+.reveal .slides section.gp-title > h1 {
+  display: none !important;
+}
+
+/* Surrounding title text flanking the large gp-code block */
+.gp-title-above,
+.gp-title-below {
+  font-family: var(--gp-grotesk);
+  font-weight: 600;
+  font-size: 38px;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  color: var(--gp-ink2);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.gp-title-above {
+  margin-bottom: 4px;
+}
+
+.gp-title-below {
+  margin-top: -4px;
+}
+
+/* Title/meta parity tuning. */
+.reveal .slides section.gp-title .gp-kicker.gp-tag,
+.reveal .slides section.gp-divider .gp-kicker.gp-tag {
+  margin-bottom: 16px;
+}
+
+.reveal .slides section.gp-title .gp-accent-bar,
+.reveal .slides section.gp-divider .gp-accent-bar {
+  margin-top: 14px;
+  margin-bottom: 22px;
+}
+
+.reveal .slides section.gp-title .gp-meta-grid {
+  max-width: 1230px;
+  grid-template-columns: repeat(3, minmax(0, 382px));
+  justify-content: start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.reveal .slides section.gp-title .gp-block {
+  padding: 11px 14px 11px 14px;
+  min-height: 72px;
+  font-size: 8.8px;
+  line-height: 1.08;
+  overflow: hidden;
+}
+
+.reveal .slides section.gp-title .gp-block .gp-label {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  padding: 6px 11px 5px 11px;
+  margin: 0 12px 0 0;
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: 0.09em;
+  transform: none;
+}
+
+/* 4-5) List marker + rhythm parity. */
+.reveal .slides section.gp-slide ul.gp-list,
+.reveal .slides section.gp-slide ol.gp-list {
+  margin-top: 18px;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  list-style: none !important;
+}
+
+.reveal .slides section.gp-slide ul.gp-list > li,
+.reveal .slides section.gp-slide ol.gp-list > li {
+  list-style: none !important;
+  margin: 10px 0;
+  padding-left: 1.4em;
+  line-height: 1.28;
+}
+
+.reveal .slides section.gp-slide ul.gp-list > li::marker,
+.reveal .slides section.gp-slide ol.gp-list > li::marker {
+  content: "";
+}
+
+.reveal .slides section.gp-slide ol.gp-list.gp-list--ordered {
+  counter-reset: gp-ol;
+}
+
+.reveal .slides section.gp-slide ol.gp-list.gp-list--ordered > li::before {
+  counter-increment: gp-ol;
+  content: counter(gp-ol, decimal-leading-zero);
+  left: 0;
+  top: 0.24em;
+  font-family: var(--gp-mono);
+  font-size: 0.62em;
+  letter-spacing: 0.07em;
+  line-height: 1;
+}
+
+/* Ensure flow text follows mono system. */
+.reveal .slides section.gp-slide > p,
+.reveal .slides section.gp-slide > blockquote + p {
+  font-family: var(--gp-mono);
+}
+
+/* 6-8, 21) Citation + link styling (author-date friendly + subdued apparatus). */
+.reveal .slides section.gp-slide a,
+.reveal .slides section.gp-slide a:visited {
+  color: var(--gp-ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.11em;
+}
+
+.reveal .slides section.gp-slide a:hover,
+.reveal .slides section.gp-slide a:focus-visible {
+  color: #000;
+}
+
+.reveal .slides section.gp-slide > :not(.gp-cites) .citation {
+  display: none !important;
+}
+
+.reveal .slides section.gp-slide :is(p, li) > .citation {
+  font-family: var(--gp-mono);
+  font-size: 0.62em;
+  line-height: 1;
+  vertical-align: super;
+  letter-spacing: 0.02em;
+  margin-left: 0.2em;
+  color: var(--gp-ink2);
+}
+
+.reveal .slides section.gp-slide > .gp-cites {
+  min-height: 30px;
+  padding-right: 96px;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.reveal .slides section.gp-slide > .gp-cites p {
+  margin: 0;
+  display: inline;
+}
+
+.reveal .slides section.gp-slide > .gp-cites .citation,
+.reveal .slides section.gp-slide > .gp-cites a {
+  color: var(--gp-ink2);
+  text-decoration: none;
+}
+
+.reveal .slides section.gp-slide > .gp-cites .citation a {
+  color: inherit;
+}
+
+.reveal .slides section.gp-slide .fragment.fade-up,
+.reveal .slides section.gp-slide .fragment.fade-in {
+  transition-duration: 230ms;
+}
+
+.reveal .slides section.gp-slide .gp-modal-trigger {
+  display: inline-block;
+  margin-left: 0.45em;
+  padding: 0.18em 0.42em 0.14em 0.42em;
+  vertical-align: baseline;
+  border: 2px solid var(--gp-ink);
+  border-radius: 0;
+  font-family: var(--gp-mono);
+  font-size: 0.64em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  text-decoration: none !important;
+  color: var(--gp-paper) !important;
+  background: var(--gp-ink);
+}
+
+.reveal .slides section.gp-slide .gp-modal-trigger:hover,
+.reveal .slides section.gp-slide .gp-modal-trigger:focus-visible {
+  color: var(--gp-paper) !important;
+  background: #000;
+  border-color: #000;
+  text-decoration: none !important;
+}
+
+/* Modal parity: hard-edged technical frame, no soft shadow language. */
+.reveal .multimodal {
+  --mm-overlaycolor: rgba(0, 0, 0, 0.62);
+  --mm-borderwidth: 3px;
+  --mm-bordercolor: #0a0a0a;
+  --mm-outerradius: 0;
+  --mm-shadow: none;
+  --mm-modal-background: #f5f4ef;
+}
+
+.reveal .multimodal .mm-max .mm-dialog {
+  border: 3px solid #0a0a0a !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: #f5f4ef !important;
+}
+
+.reveal .multimodal .mm-max .mm-dialog::before {
+  content: none !important;
+  display: none !important;
+}
+
+.reveal .multimodal .mm-max .mm-body {
+  border-radius: 0 !important;
+}
+
+.reveal .multimodal .mm-close {
+  border: 0 !important;
+  border-left: 3px solid #0a0a0a !important;
+  border-bottom: 3px solid #0a0a0a !important;
+  border-radius: 0 !important;
+  background: #0a0a0a !important;
+  width: 52px;
+  height: 52px;
+  top: -3px;
+  right: -3px;
+  padding: 0;
+  box-shadow: none !important;
+  z-index: 4;
+  transform: none !important;
+  overflow: hidden;
+}
+
+.reveal .multimodal .mm-close svg {
+  display: none !important;
+}
+
+.reveal .multimodal .mm-close::before,
+.reveal .multimodal .mm-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 14px);
+  height: 2.6px;
+  background: #f5f4ef;
+  transform-origin: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.reveal .multimodal .mm-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.reveal .multimodal .mm-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.reveal .multimodal .mm-close:hover,
+.reveal .multimodal .mm-close:focus-visible {
+  background: #0a0a0a !important;
+}
+
+.reveal .multimodal .mm-close:focus-visible {
+  outline: 2px solid #f5f4ef;
+  outline-offset: 2px;
+}
+
+.reveal .multimodal .mm-close:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* 9-10) Corner matrix must stay top-right and handle long section labels. */
+.reveal .slides section.gp-slide > .gp-corner-matrix {
+  position: absolute !important;
+  top: calc(var(--gp-pad-y) - 4px) !important;
+  right: var(--gp-pad-x) !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+}
+
+.reveal .slides section.gp-slide > .gp-corner-matrix .gp-corner-matrix__title {
+  letter-spacing: 0.03em;
+}
+
+/* 12-16, 17-18) Exhibit primitives and wrappers. */
+.reveal .slides section.gp-exhibit > .gp-figure {
+  margin-top: 14px;
+}
+
+.reveal .slides section.gp-exhibit .gp-frame {
+  display: block;
+  overflow: hidden;
+}
+
+.reveal .slides section.gp-exhibit .gp-media--exhibit {
+  width: 100%;
+  height: clamp(360px, 56vh, 670px);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.reveal .slides section.gp-exhibit .gp-frame--embed .gp-media--exhibit {
+  height: clamp(420px, 60vh, 740px);
+}
+
+.reveal .slides section.gp-exhibit .gp-frame-img,
+.reveal .slides section.gp-exhibit .gp-frame-embed {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: 0;
+  background: #fff;
+}
+
+.reveal .slides section.gp-exhibit .gp-frame-embed {
+  min-height: 420px;
+}
+
+.reveal .slides section.gp-slide > .gp-embed-fallback {
+  margin-top: 10px;
+  font-family: var(--gp-mono);
+  font-size: 15px;
+  line-height: 1.25;
+  color: var(--gp-ink2);
+}
+
+.reveal .slides section.gp-slide > .gp-embed-fallback p {
+  margin: 0;
+}
+
+.reveal .slides section.gp-half .gp-two-col {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.88fr);
+  gap: 42px;
+}
+
+.reveal .slides section.gp-half .gp-two-col .column {
+  min-width: 0;
+}
+
+.reveal .slides section.gp-half .gp-two-col .gp-list {
+  margin-top: 12px;
+  max-width: 100%;
+}
+
+.reveal .slides section.gp-half .gp-two-col .gp-figure {
+  align-self: start;
+}
+
+.reveal .slides section.gp-half .gp-half-exhibit {
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides section.gp-half .gp-half-exhibit .gp-frame {
+  border: 2px solid var(--gp-rule-strong);
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.reveal .slides section.gp-half .gp-half-exhibit .gp-media--exhibit {
+  width: 100%;
+  height: clamp(360px, 52vh, 640px);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.reveal .slides section.gp-half .gp-half-exhibit .gp-media--exhibit .gp-frame-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.reveal .slides section.gp-half .gp-half-exhibit figcaption,
+.reveal .slides section.gp-half .gp-half-exhibit > p:last-child {
+  border-top: 2px solid var(--gp-rule-strong);
+  margin-top: 12px;
+  padding-top: 10px;
+  font-family: var(--gp-mono);
+  font-size: 15px;
+  line-height: 1.3;
+  color: var(--gp-ink2);
+}
+
+.reveal .slides section.gp-filters .gp-filter-grid {
+  gap: 30px;
+}
+
+.reveal .slides section.gp-filters .gp-figure figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* QR side-card variant used in the Quarto demo deck. */
+.reveal .slides section.gp-half .gp-two-col--qr {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  align-items: start;
+}
+
+.reveal .slides section.gp-half .gp-figure--qr .gp-frame {
+  padding: 0;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  line-height: 0;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.reveal .slides section.gp-half .gp-figure--qr .gp-frame-embed {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* 19-20) References + dense long text behavior. */
+.reveal .slides section.gp-references > h1 {
+  font-size: 54px;
+  line-height: 1.05;
+}
+
+.reveal .slides section.gp-references .csl-bib-body {
+  columns: 2 !important;
+  column-count: 2 !important;
+  column-width: auto !important;
+  column-gap: 52px;
+  column-fill: balance;
+  max-width: 1560px;
+  margin-top: 12px;
+  margin-left: 0;
+  text-indent: 0;
+}
+
+.reveal .slides section.gp-references .csl-bib-body.hanging-indent {
+  margin-left: 0;
+  text-indent: 0;
+}
+
+.reveal .slides section.gp-references .csl-entry {
+  clear: none;
+  break-inside: avoid-column;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  font-family: var(--gp-mono);
+  font-size: 17px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+  color: var(--gp-ink2);
+  margin-left: 0;
+  text-indent: 0;
+}
+
+.reveal .slides section.gp-references .csl-entry a {
+  color: var(--gp-ink2);
+}
+
+.gp-auto-columns-content.gp-auto-columns-content--active {
+  max-width: 1520px;
+}
+
+/* Small view fallback */
+@media (max-width: 1320px) {
+  .reveal .slides section.gp-slide:not(.gp-divider):not(.gp-claim):not(.gp-title) > h1 {
+    font-size: 44px;
+  }
+
+  .reveal .slides section.gp-references .csl-bib-body {
+    columns: 1;
+  }
+}

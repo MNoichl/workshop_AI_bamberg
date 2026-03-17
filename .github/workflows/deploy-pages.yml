@@ -1,0 +1,65 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render slides
+        working-directory: slides
+        run: quarto render index.qmd
+
+      - name: Assemble Pages artifact
+        run: |
+          mkdir -p _site/slides
+          cp index.html _site/index.html
+          cp -R assets _site/assets
+          cp -R notebooks _site/notebooks
+          cp slides/index.html _site/slides/index.html
+          cp -R slides/index_files _site/slides/index_files
+          cp slides/gp-quarto.css _site/slides/gp-quarto.css
+          cp slides/gp-quarto.js _site/slides/gp-quarto.js
+          cp -R slides/gp-template _site/slides/gp-template
+          if [ -d slides/media ]; then cp -R slides/media _site/slides/media; fi
+          touch _site/.nojekyll
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
