@@ -31,22 +31,22 @@ link-citations: false
 
 
 
-
+<!-- 
 # Overview {layout="outline" data-gp-kicker="Workshop / Overview" data-gp-section="Plan"}
 
 * This is the first of three connected workshop sessions across March 18 and 19, 2026.
 * Session 1 covers LLM foundations, limits, audio, OCR, and practical research workflows.
 * Session 2 and Session 3 now live in separate deck files for continued drafting.
-* The workshop website bundles the landing page, slides, and notebook in one place.
+* The workshop website bundles the landing page, slides, and notebook in one place. -->
 
 
 # Schedule {layout="table" data-gp-kicker="Agenda / 01" data-gp-section="Plan"}
 
 | Day | Time | Session | Focus |
 |---|---|---|---|
-| Wed, March 18, 2026 | 14:00-16:30 | Introductory Session | Overview of useful AI tools for research work |
-| Thu, March 19, 2026 | 09:30-12:00 | Text Analysis | Structuring, analyzing, and interpreting texts with AI support |
-| Thu, March 19, 2026 | 13:00-15:30 | Programming | Prompting, debugging, and notebook-based coding with AI support |
+| Wed, March 18, 2026 | 14:00-16:30 | Introductory Session | AI for Research |
+| Thu, March 19, 2026 | 09:30-12:00 | Text Analysis | AI-powered text-analysis |
+| Thu, March 19, 2026 | 13:00-15:30 | Programming | AI-based programming assistance |
 
 
 # Preparation {layout="half" data-gp-kicker="Setup / 02" data-gp-section="Plan"}
@@ -184,10 +184,24 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 
 
+
+
+# More terminology {layout="bullets" data-gp-kicker="Session 1 / Vocabulary" data-gp-section="Session 1"}
+
+* **Context-window**: The number of tokens the model can see.
+* **GPUs**: The chips AI runs on. Mostly NVIDIA: A10, RTX 3090, RTX 5090, A100, H100, H200, B100, etc. maybe Apple Silicon M1--M4?
+* **Parameters**: Size of the model. Small: 3B, 7B, 13B; Medium: 70B, 175B; Large: 1-2T
+* **Quants:** Size reduction of models by using lower bit integers. 8bit, 4bit, 2bi
+* **MOE:** Mixture of Experts. A model that uses multiple experts to handle different parts of the input.
+
+
+
+
 # How smart are they? I {layout="bullets" data-gp-kicker="Session 1 / Limits" data-gp-section="Session 1"}
 
 * They can solve difficult tasks and still fail on surprisingly small ones.
-* Exercise: How many r's in "strawberry"? [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/strawberry.png"}
+* [EXERCISE]{.gp-exercise-tag} How many r's in "strawberry"? [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/strawberry.png"}
+* Try: Refrigerator + 5.2 Instant
 * Problem: Tokenization.
 * Car-wash problem. [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/carwash.png"}
 * Problem: Conversational context.
@@ -197,10 +211,12 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 # How smart are they? II {layout="bullets" data-gp-kicker="Session 1 / Limits" data-gp-section="Session 1"}
 
-* Hallucinations.
-* ARC-style benchmarks try to test abstract reasoning on tasks that are easy for humans but hard for AI.
+* Hallucinations. [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/eat-rocks-google-ai-overviews.jpg.webp"}
+* Remain! But more of a small model problem.
+* ARC-style benchmarks try to test abstract reasoning on tasks that are easy for humans but hard for AI. [OPEN TASK](#){.opens-modal data-modal-type="iframe" data-modal-url="https://arcprize.org/tasks/135a2760/"}
 * The capability frontier is **jagged**: performance is uneven across neighboring tasks. [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/capability_frontier.jpeg"}
 * But maybe that's the case for humans too?
+* Capabilities research suffers greatly from publication lag & cost of big models.
 
 
 
@@ -219,7 +235,7 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 # Economics {layout="bullets" data-gp-kicker="Session 1 / Stakes" data-gp-section="Session 1"}
 
-* Compute is expensive!
+* Compute is expensive! [OPEN GPU](#){.opens-modal data-modal-type="iframe" data-modal-url="https://www.primeline-solutions.com/de/nvidia-h200-nvl-141gb-hbm3e-pcie-5-0-data-center-gpu/"}
 * You get (maybe more than) what you pay for!
 * Self-hosting does not work near the frontier, but for specialized tasks.
 * Academic/European infrastructure has not caught up yet.
@@ -252,11 +268,11 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 # AI detection {layout="bullets" data-gp-kicker="Session 1 / Research Use" data-gp-section="Session 1"}
 
 * First-generation AI detectors were **very bad**.
-* Current SOTA detectors are **somewhat better** (E. g. [Pangram](https://pangram.com/)). [OPEN LIVE TOOL](#){.opens-modal data-modal-type="iframe" data-modal-url="https://maxnoichl-pangram-api-tester.hf.space"}
+* Current SOTA detectors are **somewhat better** (E. g. [Pangram](https://pangram.com/)). 
 * But still **unreliable enough** considering inductive risk!
-* **Exercise**: Ask your LLM a question & find tells. [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/Screenshot_detection.png"}
+* [EXERCISE]{.gp-exercise-tag} Ask your LLM a question & find tells. [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/Screenshot_detection.png"}
 * "It's not only X it's Y", "In practice....", "---"
-* **Exercise**: Can we fool Pangram?
+* [EXERCISE]{.gp-exercise-tag} Can we fool Pangram? [Pangram API](#){.opens-modal data-modal-type="iframe" data-modal-url="https://maxnoichl-pangram-api-tester.hf.space"}
 
 
 
@@ -266,9 +282,9 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 * Proofreading. [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/Proofread.png"}
 * Due to the "model-smell" I avoid autonomous rewrite. 
 * But: Prompt for a list of edits, than pick the ones I want works well.
-* Exercise: Review a draft or paper.  NOTE Different harshness? 
 * Looking for the *mot juste*
 * Fixing emails (also emotionally). [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/christophe_email.png"}
+* Taking care of BibTeX and LaTeX.
 
 
 # Models as reviewers II {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
@@ -278,22 +294,16 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 * Ask: Find the crucial error!
 * Sometimes surprising things turn up.
 * Maybe a future in review pipelines. PUT EXAMPLE?
+* [EXERCISE]{.gp-exercise-tag} Review a draft or paper. NOTE Different harshness?
 
-
-# Data annotation {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
-
-* Annotation and extraction are often the easiest high-value research uses.
-* Give the model a schema, examples, and a concrete output format.
-* Validate on a hand-checked sample before scaling up.
-* Exercise: politician extraction + tone scoring. [OPEN TEXT](#){.opens-modal data-modal-type="html" data-modal-url="media/data-annotation-exercise.html"}
 
 
 # Models for inquiry  {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
 
-* Autonomous research like **Deep Research** can be very helpful.
+* Autonomous research like **Deep Research** (OpenAI) can be very helpful.
 * Limited by open access (e.g. very good for computer science.)
 * Enrich citations (which citations am I missing?)
-* Exercise: Run a deep-research on a topic you know, and on one you don't. 
+* [EXERCISE]{.gp-exercise-tag} Run a deep-research on a topic you know, and on one you don't.
 
 
 # Models for coding {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
@@ -301,6 +311,7 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 * A lot of science is amateur software development.
 * It's often easy to improve our code.
 * Throw-away websites.
+* Markdown slides.
 * More & better visualizations.
 * Better documentation & reproducibility.
 * Iterate faster, but beware technical debt.
@@ -312,14 +323,14 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 * Speech-to-text is a (basically) solved problem.
 * Live demo scratchpad: [OPEN TRANSCRIPT PAD](#){.opens-modal data-modal-type="iframe" data-modal-url="media/live-transcript-demo.html"}
-* Model reccommendations: Big models in the Whisper-family & NVIDIA Parakeet
+* Model recommendations: Big models in the Whisper-family & NVIDIA Parakeet
 * Transcribe interviews, lectures, talks. Talk to the computer.
 * Transcribe, then cleanup with a strong LLM + prompt.
-* Only problem: Context.
+* Only problem: Context. Names and tech terms will be misspelled.
 
 # Vision / OCR models {layout="bullets" data-gp-kicker="Session 1 / Images and PDFs" data-gp-section="Session 1"}
 
-* Most LLMs today are actually vision-language models.
+* Many strong LLMs today are actually vision-language models.
 * Sketch-to-graphic workflows (e.g. Nano-Banana 2, ChatGPT, etc. ) [SKETCH](#){.opens-modal data-modal-type="image" data-modal-url="images/manual_Sketch#.jpeg"} [CLEANED](#){.opens-modal data-modal-type="image" data-modal-url="images/cleaned_up_sketch.jpeg"}.
 * Diagram to SVG/LaTeX, then fix manually.
 * VLM based OCR models (e.g. OLM OCR, Chandra, etc. ) easily beat old-school.
@@ -328,18 +339,41 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 
 
-# AI for science {.gp-section-slide data-gp-section="Session 1"}
+# AI for social science {.gp-section-slide data-gp-section="Session 1"}
 
 
 
 # Usage as scientists {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
 
 * LLMs can do data-labelling on complex categories.
-* Structured generation!
+* Structured generation! [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/Structured%20annotation.png"}
 * Serial queries are necessary: LLMs are lazy.
 * Validate inter-rater agreement LLM & human, then scale up. 
 * Usage via APIs or locally for sensitive data.
 * Set spending limits & alerts!
+* [EXERCISE]{.gp-exercise-tag} Prompt your LLM to generate (only) JSON, to extract structured data from a text. [OPEN TEXT](#){.opens-modal data-modal-type="html" data-modal-url="media/data-annotation-exercise.html"}
+
+
+
+# In silico social science {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
+
+
+
+
+
+
+
+
+# AI for science II {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -356,7 +390,7 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
   - document prompts, model versions, and failure cases -->
 
 
-# Practical closing slide {layout="bullets" data-gp-kicker="Session 1 / Takeaways" data-gp-section="Session 1"}
+<!-- # Practical closing slide {layout="bullets" data-gp-kicker="Session 1 / Takeaways" data-gp-section="Session 1"}
 
 * LLMs are best understood as powerful, uneven, tool-using probabilistic systems.
 * Use them aggressively for drafts, checks, coding help, and labeling.
@@ -376,4 +410,4 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 * Instructor: Max Noichl
 * Room: likely BAGSS seminar room
-* Version date: March 17, 2026
+* Version date: March 17, 2026 -->

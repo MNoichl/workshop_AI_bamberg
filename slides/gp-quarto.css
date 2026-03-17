@@ -234,6 +234,23 @@
   text-decoration: none !important;
 }
 
+.reveal .slides section.gp-slide .gp-exercise-tag {
+  display: inline-block;
+  margin-right: 0.45em;
+  padding: 0.18em 0.42em 0.14em 0.42em;
+  vertical-align: baseline;
+  border: 2px solid var(--gp-ink);
+  border-radius: 0;
+  font-family: var(--gp-mono);
+  font-size: 0.64em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--gp-paper) !important;
+  background: var(--gp-ink);
+}
+
 /* Modal parity: hard-edged technical frame, no soft shadow language. */
 .reveal .multimodal {
   --mm-overlaycolor: rgba(0, 0, 0, 0.62);

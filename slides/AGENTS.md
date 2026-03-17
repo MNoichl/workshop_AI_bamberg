@@ -112,6 +112,7 @@ Notes:
 - Modal trigger styling is automatic via `.gp-modal-trigger`.
 - Default auto-open behavior is conservative: modal links do not open just because a parent bullet fragment appears.
 - To auto-open on the next reveal step, put the modal anchor itself on a later fragment (or use a wrapper fragment with `data-modal-auto="true"`).
+- For exercise callouts, do not write plain `Exercise:`. Use `[EXERCISE]{.gp-exercise-tag}` so the label renders as a solid black inline block.
 
 ### 4) Citation Footer Apparatus
 Use `aside` blocks:
