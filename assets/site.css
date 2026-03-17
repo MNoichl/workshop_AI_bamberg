@@ -156,11 +156,13 @@ figure {
 }
 
 .quick-links a,
+.quick-link,
 .resource-card {
   text-decoration: none;
 }
 
-.quick-links a {
+.quick-links a,
+.quick-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -179,12 +181,30 @@ figure {
   color: var(--accent);
 }
 
+.quick-link--disabled,
+.resource-card--disabled {
+  color: rgba(10, 10, 10, 0.45);
+  border-color: rgba(0, 0, 0, 0.28);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.quick-link--disabled::after {
+  content: "Soon";
+  color: rgba(10, 10, 10, 0.45);
+}
+
 .quick-links a:hover,
 .quick-links a:focus-visible,
 .resource-card:hover,
 .resource-card:focus-visible {
   transform: translate(-3px, -3px);
   background: rgba(216, 58, 46, 0.05);
+}
+
+.resource-card--disabled:hover,
+.resource-card--disabled:focus-visible {
+  transform: none;
+  background: rgba(0, 0, 0, 0.03);
 }
 
 .page-main {
