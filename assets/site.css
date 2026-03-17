@@ -47,7 +47,7 @@ figure {
   display: grid;
   grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
   gap: clamp(22px, 2.2vw, 34px);
-  align-items: start;
+  align-items: stretch;
   min-height: 100vh;
   padding: 0;
 }
