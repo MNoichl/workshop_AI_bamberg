@@ -114,6 +114,7 @@ Notes:
 - To auto-open on the next reveal step, put the modal anchor itself on a later fragment (or use a wrapper fragment with `data-modal-auto="true"`).
 - For exercise callouts, do not write plain `Exercise:`. Use `[EXERCISE]{.gp-exercise-tag}` so the label renders as a solid black inline block.
 - Preserve user-authored bullet text verbatim unless the user explicitly asks for wording changes. When adding modals, citations, or links, append them without rewriting the bullet copy.
+- For project vignette slides, use only the large scrollable text box (`.gp-vignette-scroll`). Do not add vignette meta rows or small meta boxes above it.
 
 ### 4) Citation Footer Apparatus
 Use `aside` blocks:

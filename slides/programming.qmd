@@ -199,13 +199,6 @@ Little projects you can finish in about 90 minutes
 
 # Vignette 01: Personal website via GitHub Pages {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 01" data-gp-section="Session 3"}
 
-<!-- Optional vignette meta row kept out for now:
-Project: personal-site
-Time: 90 MIN
-Mode: VIBE CODING
-Output: LIVE GITHUB PAGES SITE
--->
-
 ::: {.gp-vignette-scroll}
 ::: {.gp-vignette-section}
 <div class="gp-vignette-section-title">Goal</div>
@@ -303,7 +296,6 @@ Continue the earlier text-analysis work by building a small, notebook-ready corp
 </ul>
 :::
 :::
-
 
 
 

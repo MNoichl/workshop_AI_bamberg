@@ -551,33 +551,6 @@
   margin-bottom: 14px;
 }
 
-.reveal .slides section.gp-slide.gp-vignette .gp-vignette-shell {
-  display: grid;
-  gap: 16px;
-  max-width: 1520px;
-}
-
-.reveal .slides section.gp-slide.gp-vignette .gp-vignette-meta {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.reveal .slides section.gp-slide.gp-vignette .gp-vignette-cell {
-  min-width: 0;
-  border: 2px solid var(--gp-rule-strong);
-  padding: 12px 14px;
-  background: rgba(255, 255, 255, 0.32);
-  font-family: var(--gp-mono);
-  font-size: 17px;
-  line-height: 1.25;
-}
-
-.reveal .slides section.gp-slide.gp-vignette .gp-vignette-cell .gp-label {
-  display: inline-block;
-  margin: 0 0 10px;
-}
-
 .reveal .slides section.gp-slide.gp-vignette .gp-vignette-scroll {
   border: 2px solid var(--gp-rule-strong);
   background: rgba(255, 255, 255, 0.32);
