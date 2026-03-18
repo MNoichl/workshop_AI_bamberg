@@ -5,8 +5,8 @@ pagetitle: "Programming with AI"
 # Programming with AI {layout="title" data-gp-kicker="WORKSHOP / BAMBERG" data-gp-section="Opening"}
 
 <div class="gp-title-above">Workshop / Session 3</div>
-<div class="gp-code">PROGRAMMING</div>
-<div class="gp-title-below">vibe coding, agents, software hygiene</div>
+<div class="gp-code">PROGRAMMING WITH AI</div>
+<div class="gp-title-below">vibe coding, best practices, agentic systems</div>
 <div class="gp-accent-bar" data-gp-underline="tag" aria-hidden="true"></div>
 
 ::: {.gp-subtitle}
@@ -26,21 +26,18 @@ pagetitle: "Programming with AI"
 :::
 
 
-# Schedule {layout="table" data-gp-kicker="Agenda / 01" data-gp-section="Plan"}
+<!-- # Schedule {layout="table" data-gp-kicker="Agenda / 01" data-gp-section="Plan"}
 
 | Day | Time | Session | Focus |
 |---|---|---|---|
 | Wed, March 18, 2026 | 14:00-16:30 | Introductory Session | Overview of useful AI tools for research work |
 | Thu, March 19, 2026 | 09:30-12:00 | Text Analysis | Notebook-based text analysis with AI support |
-| Thu, March 19, 2026 | 13:00-15:30 | Programming | Prompting, debugging, and notebook-based coding with AI support |
+| Thu, March 19, 2026 | 13:00-15:30 | Programming | Prompting, debugging, and notebook-based coding with AI support | -->
 
 
 # Preparation {layout="bullets" data-gp-kicker="Setup / 02" data-gp-section="Plan"}
 
-* GitHub account.
-* Browser plus an editor with AI support: ChatGPT, Claude, Cursor, VS Code + extension, Codex / Claude Code GUI, etc.
-* The shared notebook opens in [Google Colab](https://colab.research.google.com/github/MNoichl/workshop_AI_bamberg/blob/main/notebooks/workshop_notebook.ipynb).
-* Optional but useful: a local Python environment for the non-notebook parts.
+* Editor with AI support: ChatGPT, Claude or Cursor; VS Code + extension, Codex / Claude Code GUI, etc.
 
 
 # Plan: Programming with AI {layout="bullets" data-gp-kicker="Session 3 / Scope" data-gp-section="Plan"}
@@ -202,31 +199,18 @@ Little projects you can finish in about 90 minutes
 
 # Vignette 01: Personal website via GitHub Pages {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 01" data-gp-section="Session 3"}
 
-::: {.gp-vignette-shell}
-:::: {.gp-vignette-meta}
-::: {.gp-vignette-cell}
-<span class="gp-label">Project</span>
-`personal-site`
-:::
-::: {.gp-vignette-cell}
-<span class="gp-label">Time</span>
-`90 MIN`
-:::
-::: {.gp-vignette-cell}
-<span class="gp-label">Mode</span>
-`VIBE CODING`
-:::
-::: {.gp-vignette-cell}
-<span class="gp-label">Output</span>
-`LIVE GITHUB PAGES SITE`
-:::
-::::
+<!-- Optional vignette meta row kept out for now:
+Project: personal-site
+Time: 90 MIN
+Mode: VIBE CODING
+Output: LIVE GITHUB PAGES SITE
+-->
 
 ::: {.gp-vignette-scroll}
 ::: {.gp-vignette-section}
 <div class="gp-vignette-section-title">Goal</div>
 
-Build and publish a simple personal website on GitHub Pages without hand-writing much HTML and CSS.
+Build and publish a simple personal website on GitHub Pages without hand-writing *any* HTML and CSS.
 :::
 
 ::: {.gp-vignette-section}
@@ -268,28 +252,66 @@ Build and publish a simple personal website on GitHub Pages without hand-writing
 </ul>
 :::
 :::
+
+
+# Vignette 02: Build a small text corpus with respectful web scraping {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 02" data-gp-section="Session 3"}
+
+::: {.gp-vignette-scroll}
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Goal</div>
+
+Continue the earlier text-analysis work by building a small, notebook-ready corpus from the web: for example a forum, a news archive, a departmental website, a public corpus, or another page collection with repeated structure.
 :::
 
-<!--
-Future vignette template:
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">What counts as done</div>
 
-# Vignette NN: Project title {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette NN" data-gp-section="Session 3"}
+<ul class="gp-vignette-checks">
+<li>A clear target source and a small pilot scope.</li>
+<li>A manifest of pages or items to scrape first.</li>
+<li>A robots.txt and terms-of-use check before scraping content pages.</li>
+<li>A scraper with rate limiting, retries, logging, and polite pauses.</li>
+<li>A clean output table with text plus metadata for later notebook analysis.</li>
+</ul>
+:::
 
-Copy the vignette shell above.
-Keep one concrete output, one verification loop, and one deployment or export step.
--->
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Ten prompts</div>
+
+<ol class="gp-vignette-prompts">
+<li>Help me choose one realistic source for a small text-analysis project: forum, archive, corpus, or website. I want something public, repeated in structure, and small enough for a 90-minute session.</li>
+<li>Before we scrape anything, define a narrow pilot scope and a target schema for the dataset: URL, title, date, author if available, text, tags, and source metadata.</li>
+<li>Write a script that checks <code>robots.txt</code> and summarizes what looks allowed, disallowed, or unclear for this target. If the result is unclear, tell me to stop and inspect manually.</li>
+<li>Do not scrape full text yet. First build a manifest of candidate pages or posts to collect, and save it as a CSV so I can inspect the list before continuing.</li>
+<li>Audit the manifest for duplicates, off-topic pages, missing metadata, and suspicious URLs. Show me a sample and tell me what should be filtered out.</li>
+<li>Now write a respectful scraper for the approved manifest: clear user agent, polite delays, limited concurrency, retries, and logging. Keep the scope small.</li>
+<li>Save both raw HTML and cleaned text separately, so later extraction mistakes can be corrected without re-scraping everything.</li>
+<li>Normalize the dataset into one analysis-ready table and one metadata table. Keep provenance fields so I can trace every row back to the original URL.</li>
+<li>Generate a quick validation report: row count, empty texts, duplicate texts, encoding problems, extraction failures, and a few random samples for manual inspection.</li>
+<li>Write the next notebook step: show how to load the cleaned dataset and do one small analysis such as frequency counts, topic exploration, stance coding, or qualitative sampling.</li>
+</ol>
+:::
+
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Why this is a good vignette</div>
+
+<ul class="gp-vignette-checks">
+<li>It connects directly to the earlier text-analysis session.</li>
+<li>It teaches a very general pattern: list first, scrape second.</li>
+<li>It creates a reusable corpus instead of a one-off demo.</li>
+<li>It forces good habits around robots.txt, rate limits, provenance, and verification.</li>
+</ul>
+:::
+:::
 
 
-# Materials {layout="bullets" data-gp-kicker="Links / 03" data-gp-section="Material"}
-
-* Website: [Workshop overview](../)
-* Slides: [Introductory session deck](../slides/)
-* Slides: [Programming deck](../slides/programming.html)
-* Notebook: [Open in Colab](https://colab.research.google.com/github/MNoichl/workshop_AI_bamberg/blob/main/notebooks/workshop_notebook.ipynb)
 
 
-# Room and contact {layout="bullets" data-gp-kicker="Info / 04" data-gp-section="Material"}
 
-* Instructor: Max Noichl
-* Room: likely BAGSS seminar room
-* Version date: March 18, 2026
+
+
+
+
+
+
+
