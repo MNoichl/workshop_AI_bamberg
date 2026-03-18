@@ -367,20 +367,8 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 # In silico social science {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
 
-
-
-
-
-
-
-
-# AI for science II {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
-
-
-
-
-
-
+* Run experiments, or ABMs with AIs instead of humans participants.
+* Very controversial.
 
 
 
