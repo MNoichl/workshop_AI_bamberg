@@ -372,7 +372,7 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 * LLMs can do data-labelling on complex categories.
 * Structured generation! [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/Structured%20annotation.png"}
 * Serial queries are necessary: LLMs are lazy.
-* Validate inter-rater agreement LLM & human, then scale up. 
+* Validate inter-rater agreement LLM & human, then scale up. Keep quotes!
 * Usage via APIs or locally for sensitive data.
 * Set spending limits & alerts!
 * [EXERCISE]{.gp-exercise-tag} Prompt your LLM to generate (only) JSON, to extract structured data from a text. [OPEN TEXT](#){.opens-modal data-modal-type="html" data-modal-url="media/data-annotation-exercise.html"}
@@ -381,7 +381,7 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 
 # In silico social science {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
 
-* Run experiments, or ABMs with AIs instead of humans participants.
+* Run experiments, or ABMs with AIs instead of humans participants. [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="images/in_silico.pdf"}
 * Very controversial.
 
 
