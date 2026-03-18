@@ -1,6 +1,14 @@
 .DS_Store
 __pycache__/
 *.py[cod]
+
+# Local secrets / API keys
+API_KEYS.txt
+.env
+.env.*
+*.env
+*.secrets
+
 *.local.ipynb
 _site/
 .quarto/
