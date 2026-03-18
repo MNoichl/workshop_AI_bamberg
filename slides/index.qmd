@@ -261,7 +261,7 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 * Probably not much worse than everything else we do, but it doesn't help either...
 * Copyright & Commons
 * Many specific issues: Labour displacement, data ethics, decision-making (e.g. health, warfare),...
-* ...misinformation (online/legal/medical), mental health, ...
+* ...misinformation (online/legal/medical), mental health,...
 * ...AGI X-risks, AI consciousness, etc.
 
 
@@ -274,7 +274,7 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 
 * Prompt-engineering is largely over.
 * But context matters a lot: Give it as much information as possible about what you want. 
-* Try, evaluate, iterate. 
+* Try, evaluate, iterate. Work step by step.
 * Options to play with: GPT 5.4 Pro (very slow), Claude Opus 4.6 (fast), GPT-oss (local & open), Gemini, Kimi & Grok (via Cursor)
 
 
@@ -295,6 +295,7 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 * Proofreading. [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/Proofread.png"}
 * Due to the "model-smell" I'd avoid autonomous rewrites
 * Or do we already prefer AI? [NYT](#){.opens-modal data-modal-type="iframe" data-modal-url="https://www.nytimes.com/interactive/2026/03/09/business/ai-writing-quiz.html"} [Econ](#){.opens-modal data-modal-type="iframe" data-modal-url="https://kevin-kloiber.com/choose-your-side.html"}
+* *In-Context Watermarks for Large Language Models*: peer review is one motivating use case. <a href="https://icml.cc/virtual/2025/50937" target="_blank" rel="noopener">OPEN ON ICML</a>
 * But: Prompt for a list of edits, than pick the ones I want works well.
 * Looking for the *mot juste*
 * Fixing emails (also emotionally). [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/christophe_email.png"}
@@ -378,7 +379,18 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 
 
 
+# Discussion {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
 
+* What do you think?
+* What do you want to know?
+* What do you want to do?
+* What do you want to learn?
+* What do you want to share?
+* What do you want to discuss?
+* What do you want to explore?
+* What do you want to experiment with?
+* What do you want to build?
+* What do you want to share?
 
 <!-- 
 * Data labeling is already a real research use case when you provide a codebook, examples, and a clear output schema.
