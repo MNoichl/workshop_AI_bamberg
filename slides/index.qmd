@@ -295,11 +295,15 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 * Proofreading. [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/Proofread.png"}
 * Due to the "model-smell" I'd avoid autonomous rewrites
 * Or do we already prefer AI? [NYT](#){.opens-modal data-modal-type="iframe" data-modal-url="https://www.nytimes.com/interactive/2026/03/09/business/ai-writing-quiz.html"} [Econ](#){.opens-modal data-modal-type="iframe" data-modal-url="https://kevin-kloiber.com/choose-your-side.html"}
-* *In-Context Watermarks for Large Language Models*: peer review is one motivating use case. <a href="https://icml.cc/virtual/2025/50937" target="_blank" rel="noopener">OPEN ON ICML</a>
+* *In-Context Watermarks for Large Language Models*: peer review is one motivating use case. [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="images/7815_In_Context_Watermarks_for.pdf"}
 * But: Prompt for a list of edits, than pick the ones I want works well.
 * Looking for the *mot juste*
 * Fixing emails (also emotionally). [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/christophe_email.png"}
 * Taking care of BibTeX and LaTeX.
+
+::: aside
+[@liuInContextWatermarksLarge2026]
+:::
 
 
 
@@ -309,8 +313,8 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 * Heuristic review of code, maths  & statistics.
 * Ask: Find the crucial error!
 * Sometimes surprising things turn up.
-* Maybe a future in review pipelines. PUT EXAMPLE?
-* [EXERCISE]{.gp-exercise-tag} Review a draft or paper. NOTE Different harshness?
+* Maybe a future in review pipelines.
+* [EXERCISE]{.gp-exercise-tag} Review a draft or paper.
 
 
 
@@ -381,16 +385,8 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 
 # Discussion {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
 
-* What do you think?
-* What do you want to know?
-* What do you want to do?
-* What do you want to learn?
-* What do you want to share?
-* What do you want to discuss?
-* What do you want to explore?
-* What do you want to experiment with?
-* What do you want to build?
-* What do you want to share?
+
+
 
 <!-- 
 * Data labeling is already a real research use case when you provide a codebook, examples, and a clear output schema.
