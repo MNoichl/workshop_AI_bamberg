@@ -139,7 +139,7 @@ LLMs as **lossy compression**.
 :::
 
 ::: {.fragment .gp-perspectives-item data-fragment-index="4"}
-LLMs as **shoggoths**: polished interfaces over something opaque, alien, and difficult to align. [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/shoggoth_classic.jpeg"}
+LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/shoggoth_classic.jpeg"}
 :::
 
 :::
@@ -221,12 +221,12 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 # How smart are they? II {layout="bullets" data-gp-kicker="Session 1 / Limits" data-gp-section="Session 1"}
 
-* Hallucinations. [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/eat-rocks-google-ai-overviews.jpg.webp"}
+* Hallucinations... [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/eat-rocks-google-ai-overviews.jpg.webp"}
 * Remain! But more of a small model problem.
 * ARC-style benchmarks try to test abstract reasoning on tasks that are easy for humans but hard for AI. [OPEN TASK](#){.opens-modal data-modal-type="iframe" data-modal-url="https://arcprize.org/tasks/135a2760/"}
 * The capability frontier is **jagged**: performance is uneven across neighboring tasks. [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/capability_frontier.jpeg"}
 * But maybe that's the case for humans too?
-* Capabilities research suffers greatly from publication lag & cost of big models.
+* Capabilities research suffers greatly from publication lag, cost of big models and bench-mark tuning/saturation.
 
 
 
@@ -235,6 +235,7 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 * **Retrieval-augmented generation (RAG)** adds material to context via search.
 * **Reasoning models:** generate tokens before answering (test-time compute) [OPEN](#){.opens-modal data-modal-type="image" data-modal-url="images/test_time_compute.png"}
+* **MCP-servers:** Provide tools to LLMs iin a uniform format.
 * **Agents:** combine models with tools, memory, state, and a control loop.
 * **Harness**: retries, permissions, logging, cost control.
 *  **Command line use:** token efficient search, shell scripting etc.
@@ -245,8 +246,8 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 # Economics {layout="bullets" data-gp-kicker="Session 1 / Stakes" data-gp-section="Session 1"}
 
-* Compute is expensive! [OPEN GPU](#){.opens-modal data-modal-type="iframe" data-modal-url="https://www.primeline-solutions.com/de/nvidia-h200-nvl-141gb-hbm3e-pcie-5-0-data-center-gpu/"}
-* You get (maybe more than) what you pay for!
+* Compute is expensive! [OPEN GPU](#){.opens-modal data-modal-type="iframe" data-modal-url="https://turbomaxgpu.com/product/nvidia-h200-141gb/"}
+* You get (more than) what you pay for!
 * Self-hosting does not work near the frontier, but for specialized tasks.
 * Academic/European infrastructure has not caught up yet.
 
