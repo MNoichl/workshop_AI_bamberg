@@ -293,7 +293,8 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 # Models as reviewers {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
 
 * Proofreading. [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/Proofread.png"}
-* Due to the "model-smell" I'd avoid autonomous rewrites. [NYT QUIZ](#){.opens-modal data-modal-type="iframe" data-modal-url="https://www.nytimes.com/interactive/2026/03/09/business/ai-writing-quiz.html"} [CHOOSE YOUR SIDE](#){.opens-modal data-modal-type="iframe" data-modal-url="https://kevin-kloiber.com/choose-your-side.html"}
+* Due to the "model-smell" I'd avoid autonomous rewrites
+* Or do we already prefer AI? [NYT](#){.opens-modal data-modal-type="iframe" data-modal-url="https://www.nytimes.com/interactive/2026/03/09/business/ai-writing-quiz.html"} [Econ](#){.opens-modal data-modal-type="iframe" data-modal-url="https://kevin-kloiber.com/choose-your-side.html"}
 * But: Prompt for a list of edits, than pick the ones I want works well.
 * Looking for the *mot juste*
 * Fixing emails (also emotionally). [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/christophe_email.png"}
@@ -315,9 +316,9 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 # Models for inquiry  {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
 
 * Autonomous research like **Deep Research** (OpenAI) can be very helpful.
-* Limited by open access (e.g. very good for computer science.)
+* Limited by lack of open access (e.g. very good for computer science.)
 * Enrich citations (which citations am I missing?)
-* [EXERCISE]{.gp-exercise-tag} Run a deep-research on a topic you know, and on one you don't.
+* [EXERCISE]{.gp-exercise-tag} Run a deep-research/large model web-search on a topic you know, and on one you don't.
 
 
 # Models for coding {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
@@ -352,12 +353,12 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 <!-- * Typical failure modes: multi-column layouts, handwriting, formulas, low-quality scans, and hallucinated table structure. -->
 
 
+<!-- 
+# AI for science {.gp-section-slide data-gp-section="Session 1"} -->
 
-# AI for social science {.gp-section-slide data-gp-section="Session 1"}
 
 
-
-# Usage as scientists {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
+# AI for annotation & labeling {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
 
 * LLMs can do data-labelling on complex categories.
 * Structured generation! [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/Structured%20annotation.png"}
@@ -413,3 +414,6 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 * Instructor: Max Noichl
 * Room: likely BAGSS seminar room
 * Version date: March 17, 2026 -->
+
+
+# Literature {layout="references" data-gp-kicker="Sources / 01" data-gp-section="Material"}
