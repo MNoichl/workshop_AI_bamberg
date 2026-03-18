@@ -223,7 +223,7 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 
 * Hallucinations... [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/eat-rocks-google-ai-overviews.jpg.webp"}
 * Remain! But more of a small model problem.
-* ARC-style benchmarks try to test abstract reasoning on tasks that are easy for humans but hard for AI. [OPEN TASK](#){.opens-modal data-modal-type="iframe" data-modal-url="https://arcprize.org/tasks/135a2760/"}
+* ARC-AGI: A "fair" test for general intelligence? [OPEN TASK](#){.opens-modal data-modal-type="iframe" data-modal-url="https://arcprize.org/tasks/135a2760/"}
 * The capability frontier is **jagged**: performance is uneven across neighboring tasks. [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/capability_frontier.jpeg"}
 * But maybe that's the case for humans too?
 * Capabilities research suffers greatly from publication lag, cost of big models and bench-mark tuning/saturation.
@@ -235,10 +235,10 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 
 * **Retrieval-augmented generation (RAG)** adds material to context via search.
 * **Reasoning models:** generate tokens before answering (test-time compute) [OPEN](#){.opens-modal data-modal-type="image" data-modal-url="images/test_time_compute.png"}
-* **MCP-servers:** Provide tools to LLMs iin a uniform format.
+* **Model Context Protocol (MCP)-servers:** Provide tools to LLMs in a uniform format.
 * **Agents:** combine models with tools, memory, state, and a control loop.
 * **Harness**: retries, permissions, logging, cost control.
-*  **Command line use:** token efficient search, shell scripting etc.
+* **Command line use:** token efficient search, shell scripting etc.
 
 
 <!-- # Ethics & Economics {.gp-section-slide data-gp-section="Session 1"} -->
@@ -294,7 +294,7 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 
 * Proofreading. [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/Proofread.png"}
 * Due to the "model-smell" I'd avoid autonomous rewrites
-* Or do we already prefer AI? [NYT](#){.opens-modal data-modal-type="iframe" data-modal-url="https://www.nytimes.com/interactive/2026/03/09/business/ai-writing-quiz.html"} [Econ](#){.opens-modal data-modal-type="iframe" data-modal-url="https://kevin-kloiber.com/choose-your-side.html"}
+* Or do we already prefer AI? <a href="https://www.nytimes.com/interactive/2026/03/09/business/ai-writing-quiz.html" class="gp-modal-trigger" target="_blank" rel="noopener">NYT</a> [Econ](#){.opens-modal data-modal-type="iframe" data-modal-url="https://kevin-kloiber.com/choose-your-side.html"}
 * *In-Context Watermarks for Large Language Models*: peer review is one motivating use case. [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="images/7815_In_Context_Watermarks_for.pdf"}
 * But: Prompt for a list of edits, than pick the ones I want works well.
 * Looking for the *mot juste*
@@ -374,14 +374,14 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 * Serial queries are necessary: LLMs are lazy.
 * Validate inter-rater agreement LLM & human, then scale up. Keep quotes!
 * Usage via APIs or locally for sensitive data.
-* Set spending limits & alerts!
+* Set spending limits, alerts & data-usage policies!
 * [EXERCISE]{.gp-exercise-tag} Prompt your LLM to generate (only) JSON, to extract structured data from a text. [OPEN TEXT](#){.opens-modal data-modal-type="html" data-modal-url="media/data-annotation-exercise.html"}
 
 
 
 # In silico social science {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
 
-* Run experiments, or ABMs with AIs instead of humans participants. [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="images/in_silico.pdf"}
+* Run experiments with AI instead of humans participants. [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="images/in_silico.pdf"}
 * Very controversial.
 
 
