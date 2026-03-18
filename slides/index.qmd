@@ -310,11 +310,15 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 # Models as reviewers II {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
 
 
-* Heuristic review of code, maths  & statistics.
+* Heuristic review of code, maths  & statistics. [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="images/non-standard-errors.pdf"}
 * Ask: Find the crucial error!
 * Sometimes surprising things turn up.
 * Maybe a future in review pipelines.
 * [EXERCISE]{.gp-exercise-tag} Review a draft or paper.
+
+::: aside
+[@gaoNonstandardErrorsAIAgents2026]
+:::
 
 
 
