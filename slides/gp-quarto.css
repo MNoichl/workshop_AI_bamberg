@@ -203,6 +203,11 @@
   color: inherit;
 }
 
+.reveal .slides section:not(.gp-references) > #refs,
+.reveal .slides section:not(.gp-references) > .references.csl-bib-body {
+  display: none;
+}
+
 .reveal .slides section.gp-slide .fragment.fade-up,
 .reveal .slides section.gp-slide .fragment.fade-in {
   transition-duration: 230ms;

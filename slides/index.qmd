@@ -56,7 +56,8 @@ link-citations: false
 
 * Website: [https://mnoichl.github.io/workshop_AI_bamberg/](https://mnoichl.github.io/workshop_AI_bamberg/)
 * For text analysis: Google-account for access to Colab.
-* For introductiong & AI-assissted programming: Subscription to Chat-GPT or Claude
+* For introductiong & AI-assissted programming: Subscription to Chat-GPT or Claude. 
+* VSCode with Codex/Claude Code GUI pluging. Or Cursor.
 
 :::
 ::: {.column width="38%"}
@@ -80,28 +81,37 @@ Foundations, limits, workflows -->
 * How to think about them?
 * Econ & Ethics
 * *10 Minute Break*
-* Usage for research.
-* Usage for actual science.
+* *Exploration!*
+* AI for research tasks.
+* AI as scientific tool..
 
 
 # How do LLMs work I {layout="bullets" data-gp-kicker="Session 1 / Foundations" data-gp-section="Session 1"}
 
 * How to teach a computer language?
-* Idea 1: Just enumerate all the words (BOW-Models, topic models)
+* Idea 1: Just enumerate all the words (BOW-Models, topic models) [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/BOW.jpeg"}
 * But: Words have meaning!
-* Idea 2: Use word vectors (E.g. Word2Vec)
+* Idea 2: Use word vectors (E.g. Word2Vec) [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/W2V.jpeg"}
 * But: Grammar!
-* Idea 3: Split words into tokens (E.g. fastText)
+* Idea 3: Split words into tokens (E.g. fastText) [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/tokens.jpeg"}
+
+::: aside
+[@mikolovEfficientEstimationWord2013]
+:::
 
 
 # How do LLMs work II {layout="bullets" data-gp-kicker="Session 1 / Foundations" data-gp-section="Session 1"}
 
-* But: Meaning is contextual! And we want to produce language! [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="https://arxiv.org/pdf/1706.03762.pdf"}
+* But: Meaning is contextual! And we want to *produce* language! [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="https://arxiv.org/pdf/1706.03762.pdf"}
 * Idea 4: Use a Generative Transformer model [OPEN](#){.opens-modal data-modal-type="iframe" data-modal-url="https://poloclub.github.io/transformer-explainer/"}
 <!-- * But: This isn't very smart?
 * Idea 5: Train on *everything.*  -->
 * But: This is awful!
 * Idea 5: Use reinforcement learning from Human Feedback (RLHF)
+
+::: aside
+[@vaswaniAttentionAllYouNeed2017]
+:::
 
 
 
@@ -254,7 +264,7 @@ LLMs as **shoggoths**: polished interfaces over something opaque, alien, and dif
 
 
 
-# AI in Practice {.gp-section-slide data-gp-section="Session 1"}
+# AI for research tasks {.gp-section-slide data-gp-section="Session 1"}
 
 
 # General considerations {layout="bullets" data-gp-kicker="Session 1 / Research Use" data-gp-section="Session 1"}
