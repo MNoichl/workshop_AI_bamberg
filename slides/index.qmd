@@ -353,7 +353,7 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 # Vision / OCR models {layout="bullets" data-gp-kicker="Session 1 / Images and PDFs" data-gp-section="Session 1"}
 
 * Many strong LLMs today are actually vision-language models.
-* Sketch-to-graphic workflows (e.g. Nano-Banana 2, ChatGPT, etc. ) [SKETCH](#){.opens-modal data-modal-type="image" data-modal-url="images/manual_Sketch#.jpeg"} [CLEANED](#){.opens-modal data-modal-type="image" data-modal-url="images/cleaned_up_sketch.jpeg"}.
+* Sketch-to-graphic workflows (e.g. Nano-Banana 2, ChatGPT, etc. ) [SKETCH](#){.opens-modal data-modal-type="image" data-modal-url="images/manual_sketch.jpeg"} [CLEANED](#){.opens-modal data-modal-type="image" data-modal-url="images/cleaned_up_sketch.jpeg"}.
 * Diagram to SVG/LaTeX, then fix manually.
 * VLM based OCR models (e.g. OLM OCR, Chandra, etc. ) easily beat old-school.
 
