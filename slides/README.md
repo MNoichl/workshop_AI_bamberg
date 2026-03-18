@@ -3,7 +3,6 @@
 Deck sources:
 
 - [index.qmd](/Users/Noich001/Desktop/workshop_AI_bamberg/slides/index.qmd) for Session 1
-- [text-analysis.qmd](/Users/Noich001/Desktop/workshop_AI_bamberg/slides/text-analysis.qmd) for Session 2
 - [programming.qmd](/Users/Noich001/Desktop/workshop_AI_bamberg/slides/programming.qmd) for Session 3
 
 Render from the repository root with:
@@ -20,7 +19,7 @@ quarto preview slides/index.qmd
 
 ## Deployment
 
-The GitHub Pages workflow renders all three decks. The landing page currently links only to the introductory deck under `/slides/`.
+The GitHub Pages workflow renders the Session 1 and Session 3 decks. Session 2 now runs from the shared notebook rather than a separate deck.
 
 ## Notes
 

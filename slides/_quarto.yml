@@ -1,7 +1,6 @@
 project:
   render:
     - index.qmd
-    - text-analysis.qmd
     - programming.qmd
 
 format:

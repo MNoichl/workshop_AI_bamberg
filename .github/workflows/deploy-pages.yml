@@ -36,7 +36,7 @@ jobs:
           cp index.html _site/index.html
           cp -R assets _site/assets
           cp -R notebooks _site/notebooks
-          for deck in index text-analysis programming; do
+          for deck in index programming; do
             cp "slides/${deck}.html" "_site/slides/${deck}.html"
             if [ -d "slides/${deck}_files" ]; then
               cp -R "slides/${deck}_files" _site/slides/
