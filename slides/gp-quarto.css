@@ -547,6 +547,131 @@
   background: transparent;
 }
 
+.reveal .slides section.gp-slide.gp-vignette > h1 {
+  margin-bottom: 14px;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-shell {
+  display: grid;
+  gap: 16px;
+  max-width: 1520px;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-cell {
+  min-width: 0;
+  border: 2px solid var(--gp-rule-strong);
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.32);
+  font-family: var(--gp-mono);
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-cell .gp-label {
+  display: inline-block;
+  margin: 0 0 10px;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-scroll {
+  border: 2px solid var(--gp-rule-strong);
+  background: rgba(255, 255, 255, 0.32);
+  padding: 16px 18px;
+  max-height: 590px;
+  overflow-y: auto;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-section + .gp-vignette-section {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 2px solid rgba(10, 10, 10, 0.18);
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-section-title {
+  margin: 0 0 12px;
+  font-family: var(--gp-mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-section p,
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-checks li,
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-prompts li {
+  font-family: var(--gp-mono);
+  font-size: 21px;
+  line-height: 1.38;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-checks,
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-prompts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-checks li {
+  position: relative;
+  margin: 10px 0;
+  padding-left: 1.4em;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-checks li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  top: 0.03em;
+  font-family: var(--gp-mono);
+  font-size: 0.82em;
+  letter-spacing: 0.08em;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-prompts {
+  counter-reset: gp-vignette-prompts;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-prompts li {
+  position: relative;
+  margin: 0;
+  padding: 12px 0 12px 64px;
+  border-top: 2px solid rgba(10, 10, 10, 0.12);
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-prompts li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-prompts li::before {
+  counter-increment: gp-vignette-prompts;
+  content: counter(gp-vignette-prompts, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-family: var(--gp-mono);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  color: var(--gp-ink2);
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-prompts li:first-child::before {
+  top: 0;
+}
+
+.reveal .slides section.gp-slide.gp-vignette .gp-vignette-scroll code {
+  font-family: var(--gp-mono);
+  font-size: 0.92em;
+}
+
 /* 19-20) References + dense long text behavior. */
 .reveal .slides section.gp-references > h1 {
   font-size: 54px;

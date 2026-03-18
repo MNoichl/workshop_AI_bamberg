@@ -1,20 +1,17 @@
 ---
-pagetitle: "Programming with AI Support"
+pagetitle: "Programming with AI"
 ---
 
-# Programming with AI Support {layout="title" data-gp-kicker="WORKSHOP / BAMBERG" data-gp-section="Opening"}
+# Programming with AI {layout="title" data-gp-kicker="WORKSHOP / BAMBERG" data-gp-section="Opening"}
 
 <div class="gp-title-above">Workshop / Session 3</div>
 <div class="gp-code">PROGRAMMING</div>
-<div class="gp-title-below">with AI support</div>
+<div class="gp-title-below">vibe coding, agents, software hygiene</div>
 <div class="gp-accent-bar" data-gp-underline="tag" aria-hidden="true"></div>
 
 ::: {.gp-subtitle}
 <span>Thursday, March 19, 2026 · 13:00-15:30</span>
 :::
-
-<!-- Session 3 starter deck. -->
-<!-- Keep draft comments in place while building out this workshop block. -->
 
 ::: {.gp-meta-grid}
 ::: {.gp-block}
@@ -24,17 +21,9 @@ pagetitle: "Programming with AI Support"
 <span class="gp-label">Part</span> Session 3 of 3
 :::
 ::: {.gp-block}
-<span class="gp-label">Focus</span> Prompting, debugging, notebooks, tooling
+<span class="gp-label">Focus</span> Vibe coding, debugging, tooling, projects
 :::
 :::
-
-
-# Overview {layout="outline" data-gp-kicker="Workshop / Overview" data-gp-section="Plan"}
-
-* This deck is the starter for the third workshop block.
-* Use it for coding workflows, notebook exercises, and practical debugging examples.
-* Keep comments in place while drafting so the structure remains easy to extend.
-* The landing page still links only to the introductory deck for now.
 
 
 # Schedule {layout="table" data-gp-kicker="Agenda / 01" data-gp-section="Plan"}
@@ -42,38 +31,260 @@ pagetitle: "Programming with AI Support"
 | Day | Time | Session | Focus |
 |---|---|---|---|
 | Wed, March 18, 2026 | 14:00-16:30 | Introductory Session | Overview of useful AI tools for research work |
-| Thu, March 19, 2026 | 09:30-12:00 | Text Analysis | Structuring, analyzing, and interpreting texts with AI support |
+| Thu, March 19, 2026 | 09:30-12:00 | Text Analysis | Notebook-based text analysis with AI support |
 | Thu, March 19, 2026 | 13:00-15:30 | Programming | Prompting, debugging, and notebook-based coding with AI support |
 
 
 # Preparation {layout="bullets" data-gp-kicker="Setup / 02" data-gp-section="Plan"}
 
-* A current browser is enough to access the workshop website and materials.
+* GitHub account.
+* Browser plus an editor with AI support: ChatGPT, Claude, Cursor, VS Code + extension, Codex / Claude Code GUI, etc.
 * The shared notebook opens in [Google Colab](https://colab.research.google.com/github/MNoichl/workshop_AI_bamberg/blob/main/notebooks/workshop_notebook.ipynb).
-* This deck is built automatically with the rest of the workshop slides, even though the landing page does not link to it yet.
+* Optional but useful: a local Python environment for the non-notebook parts.
 
 
-# Programming with AI Support {layout="divider" data-gp-kicker="Session 3 / Thu, March 19" data-gp-section="Session 3"}
+# Plan: Programming with AI {layout="bullets" data-gp-kicker="Session 3 / Scope" data-gp-section="Plan"}
 
-Coding, debugging, notebooks
+* What "vibe coding" captures
+* Where coding assistants are genuinely good
+* Where they fail in research code
+* Tool use, agents, and the command line
+* Verification, privacy, backups, and cost limits
+* Project vignettes you can finish in about 90 minutes
+
+
+# Programming with AI {layout="divider" data-gp-kicker="Session 3 / Thu, March 19" data-gp-section="Session 3"}
+
+Vibe coding, debugging, workflows
+
+
+# Part 2: Coding with AI {layout="bullets" data-gp-kicker="Session 3 / Why Now" data-gp-section="Session 3"}
+
+* Coding with AI is one of the highest-leverage research uses of LLMs.
+* Strong for boilerplate, wrappers, glue code, refactors, tests, and debugging plans.
+* Also good for turning notebook chaos into reusable modules.
+* The real promise is not only faster code.
+* The real promise is better scientific software hygiene.
+
+
+# Vibe coding {layout="bullets" data-gp-kicker="Session 3 / Mode" data-gp-section="Session 3"}
+
+* Describe intent in natural language.
+* Let the model draft code.
+* Iterate by steering, not by writing every line yourself.
+* Powerful for prototypes, throwaway scripts, quick visualizations, and first versions.
+* But for research code, pure vibe coding is not enough.
+* Scientific code has to survive reruns, edge cases, collaborator handoff, reviewer scrutiny, and changing environments.
+
+
+# Vibe for exploration. Engineer for anything you may publish or rely on. {layout="claim" data-gp-kicker="Session 3 / Rule" data-gp-section="Session 3"}
+
+
+# A huge opportunity, and a huge trap {layout="bullets" data-gp-kicker="Session 3 / Stakes" data-gp-section="Session 3"}
+
+* AI can make tests, type hints, docstrings, CLIs, packaging, and README files much easier to add.
+* It also makes it easier to generate plausible nonsense, wrong abstractions, broken environments, and fake confidence.
+* Benchmarks make coding agents look strong.
+* Real workflows are more mixed.
+* The lesson is not "AI coding works" or "AI coding fails".
+* It depends on task, context, codebase familiarity, and verification setup.
+
+
+# Science as amateur software development {layout="bullets" data-gp-kicker="Session 3 / Framing" data-gp-section="Session 3"}
+
+* A lot of modern research is software work done by people who were not mainly trained as software engineers.
+* AI does not remove that problem.
+* It can help patch some of the skill and time gap.
+* It is especially good for the boring professionalization layer that research teams postpone.
+* Use AI not only to write analysis code, but to improve the workflow around the code.
+
+
+# All those annoying little things {layout="bullets" data-gp-kicker="Session 3 / Hygiene" data-gp-section="Session 3"}
+
+* Commits and commit messages.
+* Docstrings.
+* Virtual environments.
+* Packaging.
+* Tests, linting, type hints, CI, and README files.
+* These are often the highest-return uses.
+
+
+# From text generator to tool-using coding environment {layout="bullets" data-gp-kicker="Session 3 / Tool Use" data-gp-section="Session 3"}
+
+* A coding assistant becomes much more useful once it can read files, search a codebase, run tests, inspect logs, and use git.
+* This changes the system from a text generator into a tool-using environment.
+* It also changes the failure mode.
+* The problem is no longer only "wrong answer".
+* It can also be "wrong action".
+* So permissions, sandboxes, and review points matter.
+
+
+# Prompt engineering is over, sort of {layout="bullets" data-gp-kicker="Session 3 / Prompting" data-gp-section="Session 3"}
+
+* The era of "magic spell" prompts is mostly over.
+* For coding, the best prompts now look like a bug report, a task ticket, a miniature spec, or a test case.
+* What helps most: relevant files, constraints, expected output, verification steps, and explicit stop conditions.
+* Better than "make no mistakes":
+* `run the tests after each meaningful change`
+* `if a command fails, show me the failure and stop`
+* `do not claim success unless the checks passed`
+
+
+# Talk to the thing! {layout="bullets" data-gp-kicker="Session 3 / Interface" data-gp-section="Session 3"}
+
+* Natural language is now a real programming interface.
+* For exploratory tasks, talking or dictating intent can be genuinely efficient.
+* It works best when grounded in artifacts: files, diffs, tests, screenshots, and expected outputs.
+* Good interaction pattern: say what you want, point at the relevant files, say how success will be checked, ask for the smallest robust change first.
+
+
+# For scientific work: tell it to fail loudly {layout="bullets" data-gp-kicker="Session 3 / Verification" data-gp-section="Session 3"}
+
+* Ask the model to stop on failed tests.
+* Surface stack traces and preserve stderr.
+* List assumptions and uncertainty.
+* Avoid silent fallbacks.
+* Avoid inventing results.
+* In scientific code, a quiet wrong answer is usually worse than a loud failure.
+
+
+# Counterintuitively, they are lazy {layout="bullets" data-gp-kicker="Session 3 / Steerability" data-gp-section="Session 3"}
+
+* Models often do the minimum strongly implied by the prompt and the harness.
+* If you want exhaustive behavior, ask for exhaustive behavior.
+* If you want it to inspect every file matching a pattern, say so.
+* If you want a debugging log, require one.
+* A lot of apparent laziness is really under-specification.
+
+
+# Chatbots, agents {layout="bullets" data-gp-kicker="Session 3 / Systems" data-gp-section="Session 3"}
+
+* A chatbot mostly answers turns in a conversation.
+* An agent acts toward a goal across multiple steps, usually with tools, state, and stop conditions.
+* For coding, the simplest useful agent often looks like: model, repo access, shell or test runner, docs access, a budget, and a clear done condition.
+* You usually do not need a baroque multi-agent architecture.
+* Simple, composable setups often work best.
+
+
+# Safety, privacy, backups {layout="bullets" data-gp-kicker="Session 3 / Safety" data-gp-section="Session 3"}
+
+* Before you let an AI tool rewrite, refactor, or batch-process anything important: commit or copy the current state.
+* Work on a branch.
+* Snapshot data if needed.
+* Keep an off-site backup for anything irreplaceable.
+* Also know your privacy boundary: what leaves your machine, what gets logged, and which tools can see which files.
+
+
+# Set spending limits {layout="bullets" data-gp-kicker="Session 3 / Cost" data-gp-section="Session 3"}
+
+* Monthly budgets.
+* Notification thresholds.
+* Project-level limits.
+* Model allowlists.
+* Usage dashboards and alerts.
+* Good default pattern: cheap model first, expensive model only when needed.
+
+
+# A practical coding workflow for scientists {layout="bullets" data-gp-kicker="Session 3 / Workflow" data-gp-section="Session 3"}
+
+* Start in chat when the task is fuzzy.
+* Move to an IDE or CLI agent when the task touches real files.
+* Give the model the traceback, the environment spec, the expected output, and the test command.
+* Ask for a minimal reproduction, the smallest robust patch, a regression check, and a commit message.
+* Then review the diff like you would review a junior collaborator's work.
+* Fast is good. Auditable is better.
+
+
+# Project vignettes {layout="divider" data-gp-kicker="Session 3 / Exercises" data-gp-section="Session 3"}
+
+Little projects you can finish in about 90 minutes
+
+
+# Vignette 01: Personal website via GitHub Pages {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 01" data-gp-section="Session 3"}
+
+::: {.gp-vignette-shell}
+:::: {.gp-vignette-meta}
+::: {.gp-vignette-cell}
+<span class="gp-label">Project</span>
+`personal-site`
+:::
+::: {.gp-vignette-cell}
+<span class="gp-label">Time</span>
+`90 MIN`
+:::
+::: {.gp-vignette-cell}
+<span class="gp-label">Mode</span>
+`VIBE CODING`
+:::
+::: {.gp-vignette-cell}
+<span class="gp-label">Output</span>
+`LIVE GITHUB PAGES SITE`
+:::
+::::
+
+::: {.gp-vignette-scroll}
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Goal</div>
+
+Build and publish a simple personal website on GitHub Pages without hand-writing much HTML and CSS.
+:::
+
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">What counts as done</div>
+
+<ul class="gp-vignette-checks">
+<li>A public repo with a working GitHub Pages deployment.</li>
+<li>A homepage, an about section, a projects section, and a contact section.</li>
+<li>A layout that works on desktop and mobile.</li>
+<li>A short README explaining what to edit later.</li>
+</ul>
+:::
+
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Ten prompts</div>
+
+<ol class="gp-vignette-prompts">
+<li>Create a minimal GitHub Pages project for a personal academic website with Home, About, Projects, and Contact. Use static HTML, CSS, and JS only.</li>
+<li>Ask me six short questions about who I am, what I work on, and what should appear on the site. Then draft the site copy from my answers.</li>
+<li>Create a clean file structure with <code>index.html</code>, <code>assets/site.css</code>, <code>assets/site.js</code>, and a short <code>README.md</code>.</li>
+<li>Design the site in a clear visual direction instead of a default template. Make it responsive and easy to scan.</li>
+<li>Add a projects section driven by a small local JSON file so I can update entries later without rewriting the page.</li>
+<li>Add a contact block with email, GitHub, and one more link placeholder. Include a button for a CV or profile PDF even if the file is missing for now.</li>
+<li>Set up GitHub Pages deployment on push to <code>main</code>. Explain exactly what repository setting I need to change if anything is missing.</li>
+<li>Audit the site for broken links, missing alt text, mobile layout problems, and missing metadata. Fix what you can automatically.</li>
+<li>Now simplify. Remove anything ornamental that makes the site harder to maintain, and keep the design intentional.</li>
+<li>Write a launch checklist with the five things I should replace before I send this link to other people.</li>
+</ol>
+:::
+
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Why this is a good vignette</div>
+
+<ul class="gp-vignette-checks">
+<li>Small enough to finish.</li>
+<li>Concrete artifact at the end.</li>
+<li>Real deployment step.</li>
+<li>Forces you to verify, not just generate.</li>
+</ul>
+:::
+:::
+:::
 
 <!--
-Add Session 3 slides here.
-Draft work remains open.
+Future vignette template:
+
+# Vignette NN: Project title {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette NN" data-gp-section="Session 3"}
+
+Copy the vignette shell above.
+Keep one concrete output, one verification loop, and one deployment or export step.
 -->
-
-
-# Working Area {layout="bullets" data-gp-kicker="Session 3 / Starter" data-gp-section="Session 3"}
-
-* Candidate topics: prompting in editors, debugging with models, refactoring, notebooks, and reproducibility.
-* Keep examples concrete: traces, code diffs, tests, and failure cases.
-* Add live-demo slides here rather than on the landing-page overview deck.
 
 
 # Materials {layout="bullets" data-gp-kicker="Links / 03" data-gp-section="Material"}
 
 * Website: [Workshop overview](../)
 * Slides: [Introductory session deck](../slides/)
+* Slides: [Programming deck](../slides/programming.html)
 * Notebook: [Open in Colab](https://colab.research.google.com/github/MNoichl/workshop_AI_bamberg/blob/main/notebooks/workshop_notebook.ipynb)
 
 
@@ -81,4 +292,4 @@ Draft work remains open.
 
 * Instructor: Max Noichl
 * Room: likely BAGSS seminar room
-* Version date: March 17, 2026
+* Version date: March 18, 2026
