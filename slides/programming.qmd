@@ -91,21 +91,22 @@ Vibe coding, debugging, workflows -->
 
 # Science as amateur software development {layout="bullets" data-gp-kicker="Session 3 / Framing" data-gp-section="Session 3"}
 
-* A lot of modern research is software work done by people who were not mainly trained as software engineers.
-* AI does not remove that problem.
-* It can help patch some of the skill and time gap.
-* It is especially good for the boring professionalization layer that research teams postpone.
-* Use AI not only to write analysis code, but to improve the workflow around the code.
+
+* Science as amateur software development [OPEN VIDEO](#){.opens-modal data-modal-type="iframe" data-modal-url="https://www.youtube.com/embed/8qzVV7eEiaI"}
+* Most of as are not trained as software engineers.
+* AI can fill some professionalization gaps.
+<!-- * Use AI not only to write analysis code, but to improve the workflow around the code. -->
 
 
 # All those annoying little things {layout="bullets" data-gp-kicker="Session 3 / Hygiene" data-gp-section="Session 3"}
 
 * Commits and commit messages.
-* Docstrings.
-* Virtual environments.
+* Extensive, up-to-date Docstrings.
+* Virtual environments, managed dependencies, and configuration files.
 * Packaging.
-* Tests, linting, type hints, CI, and README files.
-* These are often the highest-return uses.
+* Testing suits. 
+* Extensive README files.
+* Increase reproducibility and downstream value.
 
 
 # From text generator to tool-using coding environment {layout="bullets" data-gp-kicker="Session 3 / Tool Use" data-gp-section="Session 3"}
@@ -298,7 +299,6 @@ Continue the earlier text-analysis work by building a small, notebook-ready corp
 </ul>
 :::
 :::
-
 
 
 
