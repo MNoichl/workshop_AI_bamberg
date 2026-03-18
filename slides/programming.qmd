@@ -40,24 +40,27 @@ pagetitle: "Programming with AI"
 * Editor with AI support: ChatGPT, Claude or Cursor; VS Code + extension, Codex / Claude Code GUI, etc.
 
 
-# Plan: Programming with AI {layout="bullets" data-gp-kicker="Session 3 / Scope" data-gp-section="Plan"}
+<!-- # Plan: Programming with AI {layout="bullets" data-gp-kicker="Session 3 / Scope" data-gp-section="Plan"}
 
 * What "vibe coding" captures
 * Where coding assistants are genuinely good
 * Where they fail in research code
 * Tool use, agents, and the command line
 * Verification, privacy, backups, and cost limits
-* Project vignettes you can finish in about 90 minutes
-
+* Project vignettes you can finish in about 90 minutes -->
+<!-- 
 
 # Programming with AI {layout="divider" data-gp-kicker="Session 3 / Thu, March 19" data-gp-section="Session 3"}
 
-Vibe coding, debugging, workflows
+Vibe coding, debugging, workflows -->
 
 
 # Part 2: Coding with AI {layout="bullets" data-gp-kicker="Session 3 / Why Now" data-gp-section="Session 3"}
 
-* Coding with AI is one of the highest-leverage research uses of LLMs.
+* LLMs turned out to be surprisingly good at coding.
+
+
+
 * Strong for boilerplate, wrappers, glue code, refactors, tests, and debugging plans.
 * Also good for turning notebook chaos into reusable modules.
 * The real promise is not only faster code.
@@ -66,14 +69,11 @@ Vibe coding, debugging, workflows
 
 # Vibe coding {layout="bullets" data-gp-kicker="Session 3 / Mode" data-gp-section="Session 3"}
 
-* Describe intent in natural language.
-* Let the model draft code.
-* Iterate by steering, not by writing every line yourself.
-* Powerful for prototypes, throwaway scripts, quick visualizations, and first versions.
-* Karpathy gave the shift a name. [OPEN TWEET](#){.opens-modal data-modal-type="image" data-modal-url="images/vibe_coding_kapathy.png"}
-* Vibe-coding is about "taste". [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/rick_rubin.jpeg"}
-* But for research code, pure vibe coding is not enough.
-* Scientific code has to survive reruns, edge cases, collaborator handoff, reviewer scrutiny, and changing environments.
+
+* "Vibe coding" - Karpathy gave the shift a name. [OPEN TWEET](#){.opens-modal data-modal-type="image" data-modal-url="images/vibe_coding_kapathy.png"}
+* Vibe-coding is about "taste". [OPEN QUOTE](#){.opens-modal data-modal-type="html" data-modal-url="media/rick-rubin-taste-quote.html"}
+* Iterate by steering.
+* Powerful for prototypes, but 
 
 
 # Vibe for exploration. Engineer for anything you may publish or rely on. {layout="claim" data-gp-kicker="Session 3 / Rule" data-gp-section="Session 3"}
