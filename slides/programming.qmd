@@ -70,23 +70,21 @@ Vibe coding, debugging, workflows -->
 # Vibe coding {layout="bullets" data-gp-kicker="Session 3 / Mode" data-gp-section="Session 3"}
 
 
-* "Vibe coding" - Karpathy gave the shift a name. [OPEN TWEET](#){.opens-modal data-modal-type="image" data-modal-url="images/vibe_coding_kapathy.png"}
+* "Vibe coding" - Karpathy [OPEN TWEET](#){.opens-modal data-modal-type="image" data-modal-url="images/vibe_coding_kapathy.png"}
 * Vibe-coding is about "taste". [OPEN QUOTE](#){.opens-modal data-modal-type="html" data-modal-url="media/rick-rubin-taste-quote.html"}
 * Iterate by steering.
-* Powerful for prototypes, but 
+* Powerful for prototypes, but be wary of technical debt.
 
 
-# Vibe for exploration. Engineer for anything you may publish or rely on. {layout="claim" data-gp-kicker="Session 3 / Rule" data-gp-section="Session 3"}
 
-
-# A huge opportunity, and a huge trap {layout="bullets" data-gp-kicker="Session 3 / Stakes" data-gp-section="Session 3"}
+<!-- # A huge opportunity, and a huge trap {layout="bullets" data-gp-kicker="Session 3 / Stakes" data-gp-section="Session 3"}
 
 * AI can make tests, type hints, docstrings, CLIs, packaging, and README files much easier to add.
 * It also makes it easier to generate plausible nonsense, wrong abstractions, broken environments, and fake confidence.
 * Benchmarks make coding agents look strong.
 * Real workflows are more mixed.
 * The lesson is not "AI coding works" or "AI coding fails".
-* It depends on task, context, codebase familiarity, and verification setup.
+* It depends on task, context, codebase familiarity, and verification setup. -->
 
 
 # Science as amateur software development {layout="bullets" data-gp-kicker="Session 3 / Framing" data-gp-section="Session 3"}
@@ -109,17 +107,15 @@ Vibe coding, debugging, workflows -->
 * Increase reproducibility and downstream value.
 
 
-# From text generator to tool-using coding environment {layout="bullets" data-gp-kicker="Session 3 / Tool Use" data-gp-section="Session 3"}
+# Agents {layout="bullets" data-gp-kicker="Session 3 / Tool Use" data-gp-section="Session 3"}
 
-* A coding assistant becomes much more useful once it can read files, search a codebase, run tests, inspect logs, and use git.
-* This changes the system from a text generator into a tool-using environment.
-* It also changes the failure mode.
-* The problem is no longer only "wrong answer".
-* It can also be "wrong action".
-* So permissions, sandboxes, and review points matter.
+* A coding assistant becomes much more useful once it can read and change your files.
+* We can steer the agent  by adding agent.md files. Never *do* X, always *do* Y,...
+* Agents can maintain these files themselves.
+* We can ask them to create plans that we approve.
 
 
-# Prompt engineering is over, sort of {layout="bullets" data-gp-kicker="Session 3 / Prompting" data-gp-section="Session 3"}
+<!-- # Prompt engineering is over, sort of {layout="bullets" data-gp-kicker="Session 3 / Prompting" data-gp-section="Session 3"}
 
 * The era of "magic spell" prompts is mostly over.
 * For coding, the best prompts now look like a bug report, a task ticket, a miniature spec, or a test case.
@@ -127,15 +123,15 @@ Vibe coding, debugging, workflows -->
 * Better than "make no mistakes":
 * `run the tests after each meaningful change`
 * `if a command fails, show me the failure and stop`
-* `do not claim success unless the checks passed`
+* `do not claim success unless the checks passed` -->
 
 
-# Talk to the thing! {layout="bullets" data-gp-kicker="Session 3 / Interface" data-gp-section="Session 3"}
+<!-- # Talk to the thing! {layout="bullets" data-gp-kicker="Session 3 / Interface" data-gp-section="Session 3"}
 
 * Natural language is now a real programming interface.
 * For exploratory tasks, talking or dictating intent can be genuinely efficient.
 * It works best when grounded in artifacts: files, diffs, tests, screenshots, and expected outputs.
-* Good interaction pattern: say what you want, point at the relevant files, say how success will be checked, ask for the smallest robust change first.
+* Good interaction pattern: say what you want, point at the relevant files, say how success will be checked, ask for the smallest robust change first. -->
 
 
 # For scientific work: tell it to fail loudly {layout="bullets" data-gp-kicker="Session 3 / Verification" data-gp-section="Session 3"}
@@ -301,7 +297,106 @@ Continue the earlier text-analysis work by building a small, notebook-ready corp
 :::
 
 
+# Vignette 03: Write a full Reveal.js slide deck in Markdown and publish it on GitHub Pages {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 03" data-gp-section="Session 3"}
 
+::: {.gp-vignette-scroll}
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Goal</div>
+
+Produce a complete talk deck in Quarto Markdown, render it to Reveal.js, and publish it on GitHub Pages so the result is a live URL rather than just local files.
+:::
+
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">What counts as done</div>
+
+<ul class="gp-vignette-checks">
+<li>A small but complete deck with title slide, section dividers, content slides, and references.</li>
+<li>A Quarto configuration that renders locally without broken assets or layout glitches.</li>
+<li>A GitHub repository with the rendered site published through GitHub Pages.</li>
+<li>A short workflow note explaining how to edit, render, commit, and redeploy.</li>
+<li>A final QA pass on desktop and mobile-sized screens.</li>
+</ul>
+:::
+
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Ten prompts</div>
+
+<ol class="gp-vignette-prompts">
+<li>Help me define a talk that is ambitious enough to be interesting but small enough to finish today. I want a title, a one-sentence thesis, and a six- to ten-slide outline.</li>
+<li>Create a Quarto Reveal.js deck in Markdown only. Use clear heading levels, speaker notes where useful, and a slide structure I can actually maintain by hand.</li>
+<li>Draft the full slide content in <code>.qmd</code>, but keep each slide presentation-sized: short bullets, strong headings, and no wall-of-text slides unless they are intentional reading slides.</li>
+<li>Add the missing plumbing for deployment: the Quarto config, output directory, and any GitHub Pages settings the repository needs.</li>
+<li>Show me how to render locally, inspect the output, and catch obvious failures like broken images, overflowing text, or missing citations.</li>
+<li>Write a small shell checklist for the iteration loop: edit, render, inspect, commit, push, and confirm the published URL.</li>
+<li>Improve the deck once the first version works. Tighten slide order, add one stronger visual example, and simplify any slide that is too dense.</li>
+<li>Add a final slide with links, references, or next steps so the published deck feels complete rather than like a half-finished class exercise.</li>
+<li>Review the repository for things that should not be pushed, such as API keys, large local files, or machine-specific paths.</li>
+<li>Give me a release pass: what still looks fragile, what I should test once more in the live GitHub Pages deployment, and what can wait.</li>
+</ol>
+:::
+
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Why this is a good vignette</div>
+
+<ul class="gp-vignette-checks">
+<li>It turns prompting into a real publication workflow with version control and deployment.</li>
+<li>It keeps the artifact concrete: a live deck with a stable URL.</li>
+<li>It forces iteration on structure, not just on wording.</li>
+<li>It teaches a durable pattern for classes, conference talks, and lab presentations.</li>
+</ul>
+:::
+:::
+
+
+# Vignette 04: Champions League match prediction from Kaggle data {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 04" data-gp-section="Session 3"}
+
+::: {.gp-vignette-scroll}
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Goal</div>
+
+Use the Kaggle <code>davidcariboo/player-scores</code> dataset to build a compact sports-analytics workflow: inspect the data, define a prediction target, and iterate from a simple baseline to a better match-outcome model for Champions League games.
+:::
+
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">What counts as done</div>
+
+<ul class="gp-vignette-checks">
+<li>A reproducible data pull or documented download step for at least <code>competitions.csv</code> and <code>games.csv</code>.</li>
+<li>A clean Champions League subset with a justified target such as home win vs. not-home-win.</li>
+<li>A short exploratory pass on seasons, round structure, goal rates, home advantage, and missingness.</li>
+<li>A proper time-aware split, for example train on earlier seasons and validate on later ones.</li>
+<li>At least three models or baselines compared honestly, with a brief interpretation of what improved and what did not.</li>
+</ul>
+:::
+
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Ten prompts</div>
+
+<ol class="gp-vignette-prompts">
+<li>Download the Kaggle dataset <code>davidcariboo/player-scores</code> into a local data directory and show me the file inventory before we pick a modeling scope.</li>
+<li>Start with the smallest viable modeling slice. Inspect <code>competitions.csv</code> and <code>games.csv</code>, identify the Champions League rows, and explain which columns are usable without a huge preprocessing detour.</li>
+<li>Define one target variable for a first pass, such as <code>home_win</code>, and explain why that is a reasonable workshop target even if richer targets are possible later.</li>
+<li>Give me a compact exploratory report: matches per season, stage or round counts, mean goals, home-win share, draw share, and any obvious data quality issues.</li>
+<li>Build the weakest acceptable baseline first. Use the training-set home-win rate as a constant predictor so we have a real number to beat.</li>
+<li>Now add a very small feature set, such as season, stage, and prior Champions League match counts for both clubs. Train a logistic regression and evaluate it on later seasons only.</li>
+<li>Engineer rolling-form features from each club's previous Champions League matches, for example last-three and last-five averages of goals scored, goals conceded, goal difference, wins, and draws.</li>
+<li>Compare at least two model families on the same split: a transparent logistic regression and a tree-based model. Report accuracy, AUC, and Brier score so calibration and ranking are both visible.</li>
+<li>Write a short interpretation of the results. Explain which features helped, which changes did not help much, and where the model still falls short.</li>
+<li>Package the work into one notebook or script that someone else in the workshop can rerun, inspect, and extend with richer features later.</li>
+</ol>
+:::
+
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Why this is a good vignette</div>
+
+<ul class="gp-vignette-checks">
+<li>It demonstrates the full loop: acquire data, explore it, model it, and revise the approach.</li>
+<li>It gives students a defensible example of why train-test design matters in predictive work.</li>
+<li>It rewards iteration because students can test whether better features matter more than simply choosing a fancier model.</li>
+<li>It creates a realistic bridge from notebook analysis to reproducible, inspectable code.</li>
+</ul>
+:::
+:::
 
 
 
