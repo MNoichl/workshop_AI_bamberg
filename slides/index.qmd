@@ -241,7 +241,7 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 *  **Command line use:** token efficient search, shell scripting etc.
 
 
-# Ethics & Economics {.gp-section-slide data-gp-section="Session 1"}
+<!-- # Ethics & Economics {.gp-section-slide data-gp-section="Session 1"} -->
 
 
 # Economics {layout="bullets" data-gp-kicker="Session 1 / Stakes" data-gp-section="Session 1"}
@@ -258,22 +258,24 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 
 * *So many problems!*
 * Big, energy intensive, somewhat water-wasteful industry.
-* Probably not worse than everything else we do, but doesn't help either...
+* Probably not much worse than everything else we do, but it doesn't help either...
 * Copyright & Commons
-* Many specific issues: Labour displacement, data ethics, decision-making, etc.
+* Many specific issues: Labour displacement, data ethics, decision-making (e.g. health, warfare),...
+* ...misinformation (online/legal/medical), mental health, ...
+* ...AGI X-risks, AI consciousness, etc.
 
 
 
 
-# AI for research tasks {.gp-section-slide data-gp-section="Session 1"}
+<!-- # AI for research tasks {.gp-section-slide data-gp-section="Session 1"} -->
 
 
 # General considerations {layout="bullets" data-gp-kicker="Session 1 / Research Use" data-gp-section="Session 1"}
 
-* Prompt-engineering is over. 
+* Prompt-engineering is largely over.
 * But context matters a lot: Give it as much information as possible about what you want. 
 * Try, evaluate, iterate. 
-* Options to play with later GPT 5.4 Pro (slow), Claude Opus 4.6 (fast), GPT-oss (local & open), Gemini, Kimi & Grok (via cursor)
+* Options to play with: GPT 5.4 Pro (very slow), Claude Opus 4.6 (fast), GPT-oss (local & open), Gemini, Kimi & Grok (via Cursor)
 
 
 # AI detection {layout="bullets" data-gp-kicker="Session 1 / Research Use" data-gp-section="Session 1"}
@@ -291,11 +293,12 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 # Models as reviewers {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
 
 * Proofreading. [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/Proofread.png"}
-* Due to the "model-smell" I avoid autonomous rewrite. 
+* Due to the "model-smell" I'd avoid autonomous rewrites. [NYT QUIZ](#){.opens-modal data-modal-type="iframe" data-modal-url="https://www.nytimes.com/interactive/2026/03/09/business/ai-writing-quiz.html"} [CHOOSE YOUR SIDE](#){.opens-modal data-modal-type="iframe" data-modal-url="https://kevin-kloiber.com/choose-your-side.html"}
 * But: Prompt for a list of edits, than pick the ones I want works well.
 * Looking for the *mot juste*
 * Fixing emails (also emotionally). [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/christophe_email.png"}
 * Taking care of BibTeX and LaTeX.
+
 
 
 # Models as reviewers II {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
