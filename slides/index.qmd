@@ -275,6 +275,7 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 * Prompt-engineering is largely over.
 * But context matters a lot: Give it as much information as possible about what you want. 
 * Try, evaluate, iterate. Work step by step.
+* Don't trust it's confidence. Useful, but defeasible!
 * Options to play with: GPT 5.4 Pro (very slow), Claude Opus 4.6 (fast), GPT-oss (local & open), Gemini, Kimi & Grok (via Cursor)
 
 
@@ -295,15 +296,12 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 * Proofreading. [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/Proofread.png"}
 * Due to the "model-smell" I'd avoid autonomous rewrites
 * Or do we already prefer AI? <a href="https://www.nytimes.com/interactive/2026/03/09/business/ai-writing-quiz.html" class="gp-modal-trigger" target="_blank" rel="noopener">NYT</a> [Econ](#){.opens-modal data-modal-type="iframe" data-modal-url="https://kevin-kloiber.com/choose-your-side.html"}
-* *In-Context Watermarks for Large Language Models*: peer review is one motivating use case. [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="images/7815_In_Context_Watermarks_for.pdf"}
-* But: Prompt for a list of edits, than pick the ones I want works well.
+* But: Prompting for a list of edits, than picking the ones I want works well.
 * Looking for the *mot juste*
 * Fixing emails (also emotionally). [OPEN SCREENSHOT](#){.opens-modal data-modal-type="image" data-modal-url="images/christophe_email.png"}
 * Taking care of BibTeX and LaTeX.
 
-::: aside
-[@liuInContextWatermarksLarge2026]
-:::
+
 
 
 
@@ -313,11 +311,11 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 * Heuristic review of code, maths  & statistics. [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="images/non-standard-errors.pdf"}
 * Ask: Find the crucial error!
 * Sometimes surprising things turn up.
-* Maybe a future in review pipelines.
+* Maybe a future in review pipelines. [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="images/7815_In_Context_Watermarks_for.pdf"}
 * [EXERCISE]{.gp-exercise-tag} Review a draft or paper.
 
 ::: aside
-[@gaoNonstandardErrorsAIAgents2026]
+[@gaoNonstandardErrorsAIAgents2026,@liuInContextWatermarksLarge2026]
 :::
 
 
@@ -325,8 +323,8 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 # Models for inquiry  {layout="bullets" data-gp-kicker="Session 1 / Workflows" data-gp-section="Session 1"}
 
 * Autonomous research like **Deep Research** (OpenAI) can be very helpful.
-* Limited by lack of open access (e.g. very good for computer science.)
-* Enrich citations (which citations am I missing?)
+* Limited by lack of open access (e.g. very good for computer science).
+* Enrich citations (what am I missing?).
 * [EXERCISE]{.gp-exercise-tag} Run a deep-research/large model web-search on a topic you know, and on one you don't.
 
 
@@ -382,13 +380,17 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 # In silico social science {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
 
 * Run experiments with AI instead of humans participants. [OPEN PAPER](#){.opens-modal data-modal-type="iframe" data-modal-url="images/in_silico.pdf"}
-* Very controversial.
+* Potentially extend to whole agent based models (ABMs).
+* Expensive, and very controversial!
+* Useful for prototyping data-collection & pre-registration?
 
 
 
 
 # Discussion {layout="bullets" data-gp-kicker="Session 1 / Research Practice" data-gp-section="Session 1"}
 
+* Questions? Ideas? 
+* What are we doing tomorrow?
 
 
 
