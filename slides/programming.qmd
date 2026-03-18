@@ -70,6 +70,8 @@ Vibe coding, debugging, workflows
 * Let the model draft code.
 * Iterate by steering, not by writing every line yourself.
 * Powerful for prototypes, throwaway scripts, quick visualizations, and first versions.
+* Karpathy gave the shift a name. [OPEN TWEET](#){.opens-modal data-modal-type="image" data-modal-url="images/vibe_coding_kapathy.png"}
+* Vibe-coding is about "taste". [OPEN IMAGE](#){.opens-modal data-modal-type="image" data-modal-url="images/rick_rubin.jpeg"}
 * But for research code, pure vibe coding is not enough.
 * Scientific code has to survive reruns, edge cases, collaborator handoff, reviewer scrutiny, and changing environments.
 
@@ -296,7 +298,6 @@ Continue the earlier text-analysis work by building a small, notebook-ready corp
 </ul>
 :::
 :::
-
 
 
 
