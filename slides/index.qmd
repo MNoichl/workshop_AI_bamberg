@@ -420,7 +420,8 @@ LLMs as **shoggoths**. Opaque, Lovecraftian amalgations of our common culture. [
 
 * Website: [Workshop overview](../)
 * Slides: [Introductory session deck](../slides/)
-* Notebook: [Open in Colab](https://colab.research.google.com/github/MNoichl/workshop_AI_bamberg/blob/main/notebooks/workshop_notebook.ipynb)
+* Programming: [Programming with AI deck](../slides/programming.html)
+* Notebook: [Open in Colab](https://colab.research.google.com/github/MNoichl/workshop_AI_bamberg/blob/main/bamberg_text_analysis_AI.ipynb)
 
 
 # Room and contact {layout="bullets" data-gp-kicker="Info / 04" data-gp-section="Material"}
