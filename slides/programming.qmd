@@ -96,7 +96,7 @@ Vibe coding, debugging, workflows -->
 
 
 * "Vibe coding" - Karpathy [OPEN TWEET](#){.opens-modal data-modal-type="image" data-modal-url="images/vibe_coding_kapathy.png"}
-* Vibe-coding is about "taste". [OPEN QUOTE](#){.opens-modal data-modal-type="html" data-modal-url="media/rick-rubin-taste-quote.html"}
+* Vibe-coding is about "taste". [OPEN QUOTE](#){.opens-modal data-modal-type="image" data-modal-url="https://preview.redd.it/lettingthevibesbeyourguide-v0-7fgejbqocece1.png?auto=webp&s=e747c6c9ceef7012330b2602fe772cfbe441553a"}
 * Iterate by steering.
 * Powerful for prototypes, but be wary of technical debt.
 
@@ -260,7 +260,7 @@ Continue the earlier text-analysis work on your own scraped data from the web: f
 <div class="gp-vignette-section-title">Things to prompt</div>
 
 <ol class="gp-vignette-prompts">
-<li>HUse the model to research potential data-sources for what you are interested in.</li>
+<li>Use the model to research potential data-sources for what you are interested in.</li>
 <li>Develop a scraping strategy with the model.</li>
 <li>Check robots.txt. Be a good citizen of the internet and scrape respectfully.</li>
 <li>Figure out a structured data-format for your results.</li>
@@ -333,7 +333,7 @@ Use the Kaggle <a href="https://www.kaggle.com/datasets/davidcariboo/player-scor
 ::: {.gp-vignette-section}
 <div class="gp-vignette-section-title">Goal</div>
 
-Well it's your own thing!
+Well. it's your own thing!
 :::
 
 
