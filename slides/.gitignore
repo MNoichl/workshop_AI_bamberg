@@ -5,6 +5,7 @@
 !_quarto.yml
 !*.bib
 !qrcode.html
+!ICPC.png
 !index.qmd
 !programming.qmd
 !ai_for_research_workshop_slides.md
@@ -38,6 +39,9 @@ images/*
 !images/eat-rocks-google-ai-overviews.jpg.webp
 !images/manual_sketch.jpeg
 !images/cleaned_up_sketch.jpeg
+!images/Deleted _photos.jpeg
+!images/reddit_AI__bill.png
+!images/vibe_coding_kapathy.png
 !media/
 !media/**
 
