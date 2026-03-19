@@ -26,6 +26,19 @@ pagetitle: "Programming with AI"
 :::
 
 
+
+# About Me {layout="bullets"}
+
+* Max Noichl, doctoral candidate in theoretical philosophy at Utrecht University.
+* Philosophy of machine learning. [OPEN](#){.opens-modal data-modal-type="iframe" data-modal-url="images/2508.15929v1.pdf"}
+* Data-driven methods for philosophy.
+* Computational Metaphilosophy [OPEN](#){.opens-modal data-modal-type="iframe" data-modal-url="images/Reason___Intuition.pdf"}
+* OpenAlex Mapper [OPEN](#){.opens-modal data-modal-type="iframe" data-modal-url="https://maxnoichl-openalex-mapper.hf.space"}
+<!-- * Scientific Model Transfer [OPEN](#){.opens-modal data-modal-type="iframe" data-modal-url="images/model_transfer.pdf"} -->
+* Simulations for social epistemology.
+* Doing philosophy with AI.
+
+
 <!-- # Schedule {layout="table" data-gp-kicker="Agenda / 01" data-gp-section="Plan"}
 
 | Day | Time | Session | Focus |
@@ -35,9 +48,28 @@ pagetitle: "Programming with AI"
 | Thu, March 19, 2026 | 13:00-15:30 | Programming | Prompting, debugging, and notebook-based coding with AI support | -->
 
 
-# Preparation {layout="bullets" data-gp-kicker="Setup / 02" data-gp-section="Plan"}
+<!-- # Preparation {layout="bullets" data-gp-kicker="Setup / 02" data-gp-section="Plan"}
 
+* Editor with AI support: ChatGPT, Claude or Cursor; VS Code + extension, Codex / Claude Code GUI, etc. -->
+
+# Preparation {layout="half" data-gp-kicker="Setup / 02" data-gp-section="Plan"}
+
+:::: {.columns .gp-two-col .gp-two-col--qr}
+::: {.column width="62%"}
+
+* Website: [https://mnoichl.github.io/workshop_AI_bamberg/](https://mnoichl.github.io/workshop_AI_bamberg/)
 * Editor with AI support: ChatGPT, Claude or Cursor; VS Code + extension, Codex / Claude Code GUI, etc.
+
+:::
+::: {.column width="38%"}
+
+::: {.gp-figure .gp-figure--qr}
+<iframe class="gp-qr-embed" src="qrcode.html?url=https%3A%2F%2Fmnoichl.github.io%2Fworkshop_AI_bamberg%2F" title="QR code to workshop website"></iframe>
+:::
+
+:::
+:::
+
 
 
 <!-- # Plan: Programming with AI {layout="bullets" data-gp-kicker="Session 3 / Scope" data-gp-section="Plan"}
@@ -57,15 +89,8 @@ Vibe coding, debugging, workflows -->
 
 # Part 2: Coding with AI {layout="bullets" data-gp-kicker="Session 3 / Why Now" data-gp-section="Session 3"}
 
-* LLMs turned out to be surprisingly good at coding.
-
-
-
-* Strong for boilerplate, wrappers, glue code, refactors, tests, and debugging plans.
-* Also good for turning notebook chaos into reusable modules.
-* The real promise is not only faster code.
-* The real promise is better scientific software hygiene.
-
+* LLMs turned out to be surprisingly good at coding. [ICPC](#){.opens-modal data-modal-type="image" data-modal-url="ICPC.png"}
+* One of the biggest contemporary use-cases.
 
 # Vibe coding {layout="bullets" data-gp-kicker="Session 3 / Mode" data-gp-section="Session 3"}
 
@@ -90,7 +115,7 @@ Vibe coding, debugging, workflows -->
 # Science as amateur software development {layout="bullets" data-gp-kicker="Session 3 / Framing" data-gp-section="Session 3"}
 
 
-* Science as amateur software development [OPEN VIDEO](#){.opens-modal data-modal-type="iframe" data-modal-url="https://www.youtube.com/embed/8qzVV7eEiaI"}
+* Science us amateur software development [OPEN VIDEO](#){.opens-modal data-modal-type="iframe" data-modal-url="https://www.youtube.com/embed/8qzVV7eEiaI"}
 * Most of as are not trained as software engineers.
 * AI can fill some professionalization gaps.
 <!-- * Use AI not only to write analysis code, but to improve the workflow around the code. -->
@@ -99,20 +124,23 @@ Vibe coding, debugging, workflows -->
 # All those annoying little things {layout="bullets" data-gp-kicker="Session 3 / Hygiene" data-gp-section="Session 3"}
 
 * Commits and commit messages.
-* Extensive, up-to-date Docstrings.
+* Extensive, up-to-date docstrings.
 * Virtual environments, managed dependencies, and configuration files.
 * Packaging.
 * Testing suits. 
+* More visualizations: Look at your data from all angles!
 * Extensive README files.
 * Increase reproducibility and downstream value.
+* *This can make science better! (and worse)*
 
 
 # Agents {layout="bullets" data-gp-kicker="Session 3 / Tool Use" data-gp-section="Session 3"}
 
 * A coding assistant becomes much more useful once it can read and change your files.
-* We can steer the agent  by adding agent.md files. Never *do* X, always *do* Y,...
+* We can steer the agent by adding agent.md files. "Never *do* X, always *do* Y,..."
 * Agents can maintain these files themselves.
-* We can ask them to create plans that we approve.
+* For scientific work: tell it to fail loudly!
+* We can ask them to create plan, and execute after approval.
 
 
 <!-- # Prompt engineering is over, sort of {layout="bullets" data-gp-kicker="Session 3 / Prompting" data-gp-section="Session 3"}
@@ -133,7 +161,7 @@ Vibe coding, debugging, workflows -->
 * It works best when grounded in artifacts: files, diffs, tests, screenshots, and expected outputs.
 * Good interaction pattern: say what you want, point at the relevant files, say how success will be checked, ask for the smallest robust change first. -->
 
-
+<!-- 
 # For scientific work: tell it to fail loudly {layout="bullets" data-gp-kicker="Session 3 / Verification" data-gp-section="Session 3"}
 
 * Ask the model to stop on failed tests.
@@ -141,62 +169,57 @@ Vibe coding, debugging, workflows -->
 * List assumptions and uncertainty.
 * Avoid silent fallbacks.
 * Avoid inventing results.
-* In scientific code, a quiet wrong answer is usually worse than a loud failure.
+* In scientific code, a quiet wrong answer is usually worse than a loud failure. -->
 
 
-# Counterintuitively, they are lazy {layout="bullets" data-gp-kicker="Session 3 / Steerability" data-gp-section="Session 3"}
+<!-- # Counterintuitively, they are lazy {layout="bullets" data-gp-kicker="Session 3 / Steerability" data-gp-section="Session 3"}
 
 * Models often do the minimum strongly implied by the prompt and the harness.
 * If you want exhaustive behavior, ask for exhaustive behavior.
 * If you want it to inspect every file matching a pattern, say so.
 * If you want a debugging log, require one.
-* A lot of apparent laziness is really under-specification.
+* A lot of apparent laziness is really under-specification. -->
 
 
-# Chatbots, agents {layout="bullets" data-gp-kicker="Session 3 / Systems" data-gp-section="Session 3"}
+<!-- # Chatbots, agents {layout="bullets" data-gp-kicker="Session 3 / Systems" data-gp-section="Session 3"}
 
 * A chatbot mostly answers turns in a conversation.
 * An agent acts toward a goal across multiple steps, usually with tools, state, and stop conditions.
 * For coding, the simplest useful agent often looks like: model, repo access, shell or test runner, docs access, a budget, and a clear done condition.
 * You usually do not need a baroque multi-agent architecture.
-* Simple, composable setups often work best.
+* Simple, composable setups often work best. -->
 
 
-# Safety, privacy, backups {layout="bullets" data-gp-kicker="Session 3 / Safety" data-gp-section="Session 3"}
+# Safety & backups {layout="bullets" data-gp-kicker="Session 3 / Safety" data-gp-section="Session 3"}
 
-* Before you let an AI tool rewrite, refactor, or batch-process anything important: commit or copy the current state.
-* Work on a branch.
-* Snapshot data if needed.
-* Keep an off-site backup for anything irreplaceable.
-* Also know your privacy boundary: what leaves your machine, what gets logged, and which tools can see which files.
+* AI *will* mess things up sooner or later. [DELETED](#){.opens-modal data-modal-type="image" data-modal-url="images/Deleted%20_photos.jpeg"}
+* Back up your data, where the AI can't find it!
+* 3-2-1 rule: 3 copies, 2 locations, 1 offsite.
+* Work with branches, make the model use git.
 
+# Set spending limits! {layout="bullets" data-gp-kicker="Session 3 / Cost" data-gp-section="Session 3"}
 
-# Set spending limits {layout="bullets" data-gp-kicker="Session 3 / Cost" data-gp-section="Session 3"}
-
-* Monthly budgets.
+* Set clear spending limits! [AI BILL](#){.opens-modal data-modal-type="image" data-modal-url="images/reddit_AI__bill.png"}
 * Notification thresholds.
-* Project-level limits.
-* Model allowlists.
-* Usage dashboards and alerts.
-* Good default pattern: cheap model first, expensive model only when needed.
+* AI-companies are sneaky: Often the defaults are not failsafe.
+* Keep your API-keys safe!
 
-
-# A practical coding workflow for scientists {layout="bullets" data-gp-kicker="Session 3 / Workflow" data-gp-section="Session 3"}
+<!-- # A practical coding workflow for scientists {layout="bullets" data-gp-kicker="Session 3 / Workflow" data-gp-section="Session 3"}
 
 * Start in chat when the task is fuzzy.
 * Move to an IDE or CLI agent when the task touches real files.
 * Give the model the traceback, the environment spec, the expected output, and the test command.
 * Ask for a minimal reproduction, the smallest robust patch, a regression check, and a commit message.
 * Then review the diff like you would review a junior collaborator's work.
-* Fast is good. Auditable is better.
+* Fast is good. Auditable is better. -->
 
 
-# Project vignettes {layout="divider" data-gp-kicker="Session 3 / Exercises" data-gp-section="Session 3"}
+# Project Ideas {layout="divider" data-gp-kicker="Session 3 / Exercises" data-gp-section="Session 3"}
 
-Little projects you can finish in about 90 minutes
+Little projects for today!
 
 
-# Vignette 01: Personal website via GitHub Pages {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 01" data-gp-section="Session 3"}
+# Idea 01: Personal website via GitHub Pages {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 01" data-gp-section="Session 3"}
 
 ::: {.gp-vignette-scroll}
 ::: {.gp-vignette-section}
@@ -206,200 +229,120 @@ Build and publish a simple personal website on GitHub Pages without hand-writing
 :::
 
 ::: {.gp-vignette-section}
-<div class="gp-vignette-section-title">What counts as done</div>
-
-<ul class="gp-vignette-checks">
-<li>A public repo with a working GitHub Pages deployment.</li>
-<li>A homepage, an about section, a projects section, and a contact section.</li>
-<li>A layout that works on desktop and mobile.</li>
-<li>A short README explaining what to edit later.</li>
-</ul>
-:::
-
-::: {.gp-vignette-section}
-<div class="gp-vignette-section-title">Ten prompts</div>
+<div class="gp-vignette-section-title">Things to prompt</div>
 
 <ol class="gp-vignette-prompts">
 <li>Create a minimal GitHub Pages project for a personal academic website with Home, About, Projects, and Contact. Use static HTML, CSS, and JS only.</li>
-<li>Ask me six short questions about who I am, what I work on, and what should appear on the site. Then draft the site copy from my answers.</li>
-<li>Create a clean file structure with <code>index.html</code>, <code>assets/site.css</code>, <code>assets/site.js</code>, and a short <code>README.md</code>.</li>
-<li>Design the site in a clear visual direction instead of a default template. Make it responsive and easy to scan.</li>
-<li>Add a projects section driven by a small local JSON file so I can update entries later without rewriting the page.</li>
-<li>Add a contact block with email, GitHub, and one more link placeholder. Include a button for a CV or profile PDF even if the file is missing for now.</li>
-<li>Set up GitHub Pages deployment on push to <code>main</code>. Explain exactly what repository setting I need to change if anything is missing.</li>
-<li>Audit the site for broken links, missing alt text, mobile layout problems, and missing metadata. Fix what you can automatically.</li>
-<li>Now simplify. Remove anything ornamental that makes the site harder to maintain, and keep the design intentional.</li>
-<li>Write a launch checklist with the five things I should replace before I send this link to other people.</li>
+<li>If you want a blog – ask the model to tell you about Jekyll & Hugo...</li>
+<li>Give the model information. A CV, an old website, a list of publications...</li>
+<li>Ask the model to organize the site.</li>
+<li>Find some website you like. Screenshot it. Give the screenshot to your model and ask it  to make your website look like that.</li>
+<li>Ask about GDPR, cookie-banners, Impressum, etc. Make the model fix that for you.</li>
+<li>Let the model walk you through setting up a Github account and publishing your website.</li>
+<li>Iterate! Make it look better!</li>
 </ol>
 :::
 
-::: {.gp-vignette-section}
-<div class="gp-vignette-section-title">Why this is a good vignette</div>
-
-<ul class="gp-vignette-checks">
-<li>Small enough to finish.</li>
-<li>Concrete artifact at the end.</li>
-<li>Real deployment step.</li>
-<li>Forces you to verify, not just generate.</li>
-</ul>
-:::
 :::
 
 
-# Vignette 02: Build a small text corpus with respectful web scraping {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 02" data-gp-section="Session 3"}
+# Vignette 02: Build a small text corpus through web scraping {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 02" data-gp-section="Session 3"}
 
 ::: {.gp-vignette-scroll}
 ::: {.gp-vignette-section}
 <div class="gp-vignette-section-title">Goal</div>
 
-Continue the earlier text-analysis work by building a small, notebook-ready corpus from the web: for example a forum, a news archive, a departmental website, a public corpus, or another page collection with repeated structure.
+Continue the earlier text-analysis work on your own scraped data from the web: for example a forum, a news archive, a public corpus,...
 :::
 
-::: {.gp-vignette-section}
-<div class="gp-vignette-section-title">What counts as done</div>
-
-<ul class="gp-vignette-checks">
-<li>A clear target source and a small pilot scope.</li>
-<li>A manifest of pages or items to scrape first.</li>
-<li>A robots.txt and terms-of-use check before scraping content pages.</li>
-<li>A scraper with rate limiting, retries, logging, and polite pauses.</li>
-<li>A clean output table with text plus metadata for later notebook analysis.</li>
-</ul>
-:::
 
 ::: {.gp-vignette-section}
-<div class="gp-vignette-section-title">Ten prompts</div>
+<div class="gp-vignette-section-title">Things to prompt</div>
 
 <ol class="gp-vignette-prompts">
-<li>Help me choose one realistic source for a small text-analysis project: forum, archive, corpus, or website. I want something public, repeated in structure, and small enough for a 90-minute session.</li>
-<li>Before we scrape anything, define a narrow pilot scope and a target schema for the dataset: URL, title, date, author if available, text, tags, and source metadata.</li>
-<li>Write a script that checks <code>robots.txt</code> and summarizes what looks allowed, disallowed, or unclear for this target. If the result is unclear, tell me to stop and inspect manually.</li>
-<li>Do not scrape full text yet. First build a manifest of candidate pages or posts to collect, and save it as a CSV so I can inspect the list before continuing.</li>
-<li>Audit the manifest for duplicates, off-topic pages, missing metadata, and suspicious URLs. Show me a sample and tell me what should be filtered out.</li>
-<li>Now write a respectful scraper for the approved manifest: clear user agent, polite delays, limited concurrency, retries, and logging. Keep the scope small.</li>
-<li>Save both raw HTML and cleaned text separately, so later extraction mistakes can be corrected without re-scraping everything.</li>
-<li>Normalize the dataset into one analysis-ready table and one metadata table. Keep provenance fields so I can trace every row back to the original URL.</li>
-<li>Generate a quick validation report: row count, empty texts, duplicate texts, encoding problems, extraction failures, and a few random samples for manual inspection.</li>
-<li>Write the next notebook step: show how to load the cleaned dataset and do one small analysis such as frequency counts, topic exploration, stance coding, or qualitative sampling.</li>
+<li>HUse the model to research potential data-sources for what you are interested in.</li>
+<li>Develop a scraping strategy with the model.</li>
+<li>Check robots.txt. Be a good citizen of the internet and scrape respectfully.</li>
+<li>Figure out a structured data-format for your results.</li>
+<li>Audit for problems.</li>
+<li>Figure out the text extraction: HTML to plaintext.</li>
+<li>Bring it into the right format for text analysis.</li>
 </ol>
 :::
 
+:::
+
+
+# Vignette 03: Write a .qmd presentation and publish it on GitHub Pages {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 03" data-gp-section="Session 3"}
+
+::: {.gp-vignette-scroll}
+
 ::: {.gp-vignette-section}
-<div class="gp-vignette-section-title">Why this is a good vignette</div>
+<div class="gp-vignette-section-title">Goal</div>
 
-<ul class="gp-vignette-checks">
-<li>It connects directly to the earlier text-analysis session.</li>
-<li>It teaches a very general pattern: list first, scrape second.</li>
-<li>It creates a reusable corpus instead of a one-off demo.</li>
-<li>It forces good habits around robots.txt, rate limits, provenance, and verification.</li>
-</ul>
-:::
+Produce a talk deck in Quarto Markdown, render it to Reveal.js, and publish it on GitHub Pages.
 :::
 
 
-# Vignette 03: Write a full Reveal.js slide deck in Markdown and publish it on GitHub Pages {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 03" data-gp-section="Session 3"}
+::: {.gp-vignette-section}
+<div class="gp-vignette-section-title">Things to prompt</div>
+
+<ol class="gp-vignette-prompts">
+<li>Start with a talk you already gave, and move it to markdown.</li>
+<li>Let the model install quarto.</li>
+<li>Make the model turn your .md into a full qmd presentation.</li>
+<li>Render locally, and work on your aesthetics.</li>
+<li>Figure out figures, bibtex, etc.</li>
+<li>Set up github, a repository, and then publish it on GitHub Pages.</li>
+<li>Publish it on GitHub Pages.</li>
+<li>Learn about github actions to build automatically online!</li>
+</ol>
+:::
+
+:::
+
+
+# Vignette 04: Champions League {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 04" data-gp-section="Session 3"}
 
 ::: {.gp-vignette-scroll}
 ::: {.gp-vignette-section}
 <div class="gp-vignette-section-title">Goal</div>
 
-Produce a complete talk deck in Quarto Markdown, render it to Reveal.js, and publish it on GitHub Pages so the result is a live URL rather than just local files.
+Use the Kaggle <a href="https://www.kaggle.com/datasets/davidcariboo/player-scores/data"><code>davidcariboo/player-scores</code></a> dataset to try out AI assissted coding for sports analytics
 :::
 
-::: {.gp-vignette-section}
-<div class="gp-vignette-section-title">What counts as done</div>
-
-<ul class="gp-vignette-checks">
-<li>A small but complete deck with title slide, section dividers, content slides, and references.</li>
-<li>A Quarto configuration that renders locally without broken assets or layout glitches.</li>
-<li>A GitHub repository with the rendered site published through GitHub Pages.</li>
-<li>A short workflow note explaining how to edit, render, commit, and redeploy.</li>
-<li>A final QA pass on desktop and mobile-sized screens.</li>
-</ul>
-:::
 
 ::: {.gp-vignette-section}
-<div class="gp-vignette-section-title">Ten prompts</div>
+<div class="gp-vignette-section-title">Things to prompt</div>
 
 <ol class="gp-vignette-prompts">
-<li>Help me define a talk that is ambitious enough to be interesting but small enough to finish today. I want a title, a one-sentence thesis, and a six- to ten-slide outline.</li>
-<li>Create a Quarto Reveal.js deck in Markdown only. Use clear heading levels, speaker notes where useful, and a slide structure I can actually maintain by hand.</li>
-<li>Draft the full slide content in <code>.qmd</code>, but keep each slide presentation-sized: short bullets, strong headings, and no wall-of-text slides unless they are intentional reading slides.</li>
-<li>Add the missing plumbing for deployment: the Quarto config, output directory, and any GitHub Pages settings the repository needs.</li>
-<li>Show me how to render locally, inspect the output, and catch obvious failures like broken images, overflowing text, or missing citations.</li>
-<li>Write a small shell checklist for the iteration loop: edit, render, inspect, commit, push, and confirm the published URL.</li>
-<li>Improve the deck once the first version works. Tighten slide order, add one stronger visual example, and simplify any slide that is too dense.</li>
-<li>Add a final slide with links, references, or next steps so the published deck feels complete rather than like a half-finished class exercise.</li>
-<li>Review the repository for things that should not be pushed, such as API keys, large local files, or machine-specific paths.</li>
-<li>Give me a release pass: what still looks fragile, what I should test once more in the live GitHub Pages deployment, and what can wait.</li>
+<li>Have the LLM download the Kaggle dataset <a href="https://www.kaggle.com/datasets/davidcariboo/player-scores/data"><code>davidcariboo/player-scores</code></a> into a local data directory.</li>
+<li>Explore! create some figures and tables in `.ipynb` or `.Rmd` to get a feeling for the data.</li>
+<li>Develop a modelling strategy with the LLM.</li>
+<li>Build the first version of a model, validate on hold out data.</li>
+<li>Iterate. Find problems with the model, improve it, and validate again. Try out new model types, machine-learning approaches, etc.</li>
+<li>Probe the LLM to find problems with your approach and suggest improvements.</li>
 </ol>
 :::
 
-::: {.gp-vignette-section}
-<div class="gp-vignette-section-title">Why this is a good vignette</div>
-
-<ul class="gp-vignette-checks">
-<li>It turns prompting into a real publication workflow with version control and deployment.</li>
-<li>It keeps the artifact concrete: a live deck with a stable URL.</li>
-<li>It forces iteration on structure, not just on wording.</li>
-<li>It teaches a durable pattern for classes, conference talks, and lab presentations.</li>
-</ul>
-:::
 :::
 
-
-# Vignette 04: Champions League match prediction from Kaggle data {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 04" data-gp-section="Session 3"}
+# Idea 05: Do your own thing! {layout="bullets" .gp-vignette data-gp-kicker="Session 3 / Vignette 01" data-gp-section="Session 3"}
 
 ::: {.gp-vignette-scroll}
 ::: {.gp-vignette-section}
 <div class="gp-vignette-section-title">Goal</div>
 
-Use the Kaggle <code>davidcariboo/player-scores</code> dataset to build a compact sports-analytics workflow: inspect the data, define a prediction target, and iterate from a simple baseline to a better match-outcome model for Champions League games.
+Well it's your own thing!
 :::
 
-::: {.gp-vignette-section}
-<div class="gp-vignette-section-title">What counts as done</div>
-
-<ul class="gp-vignette-checks">
-<li>A reproducible data pull or documented download step for at least <code>competitions.csv</code> and <code>games.csv</code>.</li>
-<li>A clean Champions League subset with a justified target such as home win vs. not-home-win.</li>
-<li>A short exploratory pass on seasons, round structure, goal rates, home advantage, and missingness.</li>
-<li>A proper time-aware split, for example train on earlier seasons and validate on later ones.</li>
-<li>At least three models or baselines compared honestly, with a brief interpretation of what improved and what did not.</li>
-</ul>
-:::
 
 ::: {.gp-vignette-section}
-<div class="gp-vignette-section-title">Ten prompts</div>
+<div class="gp-vignette-section-title">Things to prompt</div>
 
 <ol class="gp-vignette-prompts">
-<li>Download the Kaggle dataset <code>davidcariboo/player-scores</code> into a local data directory and show me the file inventory before we pick a modeling scope.</li>
-<li>Start with the smallest viable modeling slice. Inspect <code>competitions.csv</code> and <code>games.csv</code>, identify the Champions League rows, and explain which columns are usable without a huge preprocessing detour.</li>
-<li>Define one target variable for a first pass, such as <code>home_win</code>, and explain why that is a reasonable workshop target even if richer targets are possible later.</li>
-<li>Give me a compact exploratory report: matches per season, stage or round counts, mean goals, home-win share, draw share, and any obvious data quality issues.</li>
-<li>Build the weakest acceptable baseline first. Use the training-set home-win rate as a constant predictor so we have a real number to beat.</li>
-<li>Now add a very small feature set, such as season, stage, and prior Champions League match counts for both clubs. Train a logistic regression and evaluate it on later seasons only.</li>
-<li>Engineer rolling-form features from each club's previous Champions League matches, for example last-three and last-five averages of goals scored, goals conceded, goal difference, wins, and draws.</li>
-<li>Compare at least two model families on the same split: a transparent logistic regression and a tree-based model. Report accuracy, AUC, and Brier score so calibration and ranking are both visible.</li>
-<li>Write a short interpretation of the results. Explain which features helped, which changes did not help much, and where the model still falls short.</li>
-<li>Package the work into one notebook or script that someone else in the workshop can rerun, inspect, and extend with richer features later.</li>
+<li> Tell the model what you want to do, and let it help you!</li>
 </ol>
 :::
 
-::: {.gp-vignette-section}
-<div class="gp-vignette-section-title">Why this is a good vignette</div>
-
-<ul class="gp-vignette-checks">
-<li>It demonstrates the full loop: acquire data, explore it, model it, and revise the approach.</li>
-<li>It gives students a defensible example of why train-test design matters in predictive work.</li>
-<li>It rewards iteration because students can test whether better features matter more than simply choosing a fancier model.</li>
-<li>It creates a realistic bridge from notebook analysis to reproducible, inspectable code.</li>
-</ul>
 :::
-:::
-
-
-
-
-
-
