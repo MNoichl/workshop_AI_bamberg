@@ -45,6 +45,7 @@ jobs:
           cp slides/gp-quarto.css _site/slides/gp-quarto.css
           cp slides/gp-quarto.js _site/slides/gp-quarto.js
           cp slides/qrcode.html _site/slides/qrcode.html
+          if [ -f slides/ICPC.png ]; then cp slides/ICPC.png _site/slides/ICPC.png; fi
           cp -R slides/gp-template _site/slides/gp-template
           if [ -d slides/media ]; then cp -R slides/media _site/slides/media; fi
           if [ -d slides/images ]; then cp -R slides/images _site/slides/images; fi
